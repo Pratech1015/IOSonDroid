@@ -72,6 +72,10 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
           Add to F-Droid
         </button>
+        <a href="#converter-studio" class="btn btn-primary" style="background: linear-gradient(135deg, #af52de 0%, #ff2d55 100%);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+          iOS-to-Android Converter
+        </a>
         <a href="#setup-guide" class="btn btn-secondary">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           How to Add Repo
@@ -101,6 +105,170 @@
             <code id="fp-text">33F66FBCA58FC049A8D3E264E7AF414530DC8329D83BFBD9FCF0F3337879E5E0</code>
             <button class="copy-btn" id="copy-fp-btn" style="padding: 4px 10px; font-size: 0.76rem;">Copy</button>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- iOS to Android Converter Studio -->
+    <section class="converter-section" id="converter-studio">
+      <div class="converter-header">
+        <div class="badge-pill" style="background: rgba(175, 82, 222, 0.15); border-color: rgba(175, 82, 222, 0.4); color: #bf5af2;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+          Standalone Conversion Engine
+        </div>
+        <h2>iOS to Android Converter Studio</h2>
+        <p style="color: var(--text-secondary); max-width: 720px; margin: 0 auto;">
+          Convert your iOS-only applications into standalone, installable Android APKs or translate Xcode projects, Swift source code, and assets into complete Android Studio Gradle projects.
+        </p>
+      </div>
+
+      <!-- Studio Mode Tabs -->
+      <div class="converter-tabs">
+        <button class="conv-tab-btn active" data-tab="conv-ipa">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          IPA to Standalone APK (ipa2apk)
+        </button>
+        <button class="conv-tab-btn" data-tab="conv-swift">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          Swift to Kotlin &amp; Plist Transpiler
+        </button>
+        <button class="conv-tab-btn" data-tab="conv-cli">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m10 10-2 2 2 2"/><path d="m14 14 2-2-2-2"/></svg>
+          Terminal CLI Tools (ios2droid)
+        </button>
+      </div>
+
+      <!-- Tab 1: IPA to Standalone APK -->
+      <div class="conv-panel active" id="conv-ipa">
+        <div class="drop-zone" id="ipa-drop-zone">
+          <input type="file" id="ipa-file-input" accept=".ipa,.zip" style="display: none;" />
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="17 8 12 3 7 8"/>
+            <line x1="12" y1="3" x2="12" y2="15"/>
+          </svg>
+          <h3>Drag &amp; Drop an iOS .ipa package here</h3>
+          <p style="color: var(--text-tertiary); font-size: 0.88rem; margin: 6px 0 16px;">
+            Supports decrypted iOS app bundles (.ipa or .zip). The converter extracts the Mach-O binary, inspects DRM encryption, and wraps it into a standalone Android APK.
+          </p>
+          <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+            <button class="btn btn-secondary" onclick="document.getElementById('ipa-file-input').click()">Browse Files</button>
+            <button class="btn btn-primary" id="load-demo-ipa-btn" style="background: linear-gradient(135deg, #af52de, #5856d6);">Load Demo iOS App</button>
+          </div>
+        </div>
+
+        <!-- Analysis Inspector Card -->
+        <div class="conv-inspector" id="conv-inspector" style="display: none;">
+          <div class="inspector-header">
+            <img src="repo/icons/org.touchhle.android.png" id="insp-icon" class="insp-icon" alt="App Icon" />
+            <div class="insp-meta">
+              <h3 id="insp-name">Super Monkey Ball</h3>
+              <div style="color: var(--text-tertiary); font-size: 0.84rem;" id="insp-pkg">com.sega.supermonkeyball</div>
+              <div class="app-tags" style="margin-top: 6px;">
+                <span class="tag version" id="insp-version">v1.2.0</span>
+                <span class="tag" id="insp-arch">ARMv7</span>
+                <span class="tag" id="insp-drm" style="background: rgba(52, 199, 89, 0.15); color: #34c759;">DRM-Free</span>
+                <span class="tag category">touchHLE Compatible</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="inspector-details">
+            <div class="detail-row">
+              <span class="d-label">Minimum iOS Target:</span>
+              <span class="d-val" id="insp-min-ios">iOS 3.0+</span>
+            </div>
+            <div class="detail-row">
+              <span class="d-label">Package Size:</span>
+              <span class="d-val" id="insp-size">18.4 MB</span>
+            </div>
+            <div class="detail-row">
+              <span class="d-label">Orientation:</span>
+              <span class="d-val" id="insp-orient">Landscape</span>
+            </div>
+            <div class="detail-row">
+              <span class="d-label">Runtime Engine:</span>
+              <span class="d-val">Embedded touchHLE + libSDL2 + OpenGL ES 2.0</span>
+            </div>
+          </div>
+
+          <!-- Progress and Action -->
+          <div class="conv-action-bar">
+            <button class="btn btn-primary" id="btn-start-convert" style="width: 100%; justify-content: center;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Convert to Standalone Android APK
+            </button>
+          </div>
+
+          <div class="conv-progress-box" id="conv-progress-box" style="display: none;">
+            <div class="progress-bar-track">
+              <div class="progress-bar-fill" id="progress-bar-fill"></div>
+            </div>
+            <div class="progress-log" id="progress-log">Initializing converter pipeline...</div>
+          </div>
+
+          <div class="conv-download-box" id="conv-download-box" style="display: none;">
+            <div style="color: #34c759; font-weight: 600; margin-bottom: 8px;">✓ Conversion Complete! Standalone Android APK Ready.</div>
+            <a href="repo/org.touchhle.android_30.apk" class="btn btn-primary" id="download-converted-apk" download>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Standalone APK (SuperMonkeyBall_android.apk)
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: Swift to Kotlin Transpiler -->
+      <div class="conv-panel" id="conv-swift">
+        <div class="transpiler-container">
+          <div class="editor-col">
+            <div class="editor-header">
+              <span>Swift Source (iOS)</span>
+              <button class="copy-btn" id="btn-load-swift-sample" style="padding: 4px 10px; font-size: 0.76rem;">Load Sample Swift</button>
+            </div>
+            <textarea id="swift-input" class="code-editor" placeholder="Paste iOS Swift code here..."></textarea>
+          </div>
+
+          <div class="editor-col">
+            <div class="editor-header">
+              <span>Kotlin Equivalent (Android)</span>
+              <button class="copy-btn" id="btn-copy-kotlin" style="padding: 4px 10px; font-size: 0.76rem;">Copy Kotlin</button>
+            </div>
+            <textarea id="kotlin-output" class="code-editor" readonly placeholder="Transpiled Kotlin code will appear here..."></textarea>
+          </div>
+        </div>
+        <div style="margin-top: 14px; text-align: center;">
+          <button class="btn btn-primary" id="btn-run-transpile">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
+            Transpile to Kotlin
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab 3: Terminal CLI Tools -->
+      <div class="conv-panel" id="conv-cli">
+        <div class="cli-guide">
+          <h3>Local Command Line Utility: <code>ios2droid</code></h3>
+          <p style="color: var(--text-secondary); margin-bottom: 16px;">
+            For batch processing, automated CI/CD builds, or compiling larger Xcode projects, use the included CLI tool located in <code>bin/ios2droid</code> or <code>scripts/converter.py</code>:
+          </p>
+
+          <div class="cli-cmd-block">
+            <code>./bin/ios2droid analyze AppName.ipa</code>
+            <button class="copy-btn" onclick="copyToClipboard('./bin/ios2droid analyze AppName.ipa', 'Command copied!')">Copy</button>
+          </div>
+          <p class="cli-hint">Inspects Mach-O encryption, architecture, Info.plist metadata, and touchHLE compatibility.</p>
+
+          <div class="cli-cmd-block">
+            <code>./bin/ios2droid convert AppName.ipa -o AppName_android.apk</code>
+            <button class="copy-btn" onclick="copyToClipboard('./bin/ios2droid convert AppName.ipa -o AppName_android.apk', 'Command copied!')">Copy</button>
+          </div>
+          <p class="cli-hint">Wraps the iOS app with the embedded runtime container into a signed, installable Android APK.</p>
+
+          <div class="cli-cmd-block">
+            <code>./bin/ios2droid project ./ios_xcode_project -o ./android_project</code>
+            <button class="copy-btn" onclick="copyToClipboard('./bin/ios2droid project ./ios_xcode_project -o ./android_project', 'Command copied!')">Copy</button>
+          </div>
+          <p class="cli-hint">Translates Xcode structure, Info.plist -> AndroidManifest.xml, Localizable.strings -> strings.xml, and Swift to Kotlin.</p>
         </div>
       </div>
     </section>

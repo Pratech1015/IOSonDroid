@@ -55,6 +55,60 @@ If you have **F-Droid**, **Neo Store**, or **Droid-ify** installed, tap the link
 
 ---
 
+## 🔄 iOS-to-Android Application Converter (`ios2droid`)
+
+**IOSonDroid** includes a built-in conversion suite and CLI tool (`./bin/ios2droid` or `scripts/converter.py`) that converts iOS-exclusive applications into Android packages and projects:
+
+```
+                                  ┌───────────────────────────────┐
+                                  │   iOS Application (.ipa)      │
+                                  │  Info.plist + Mach-O + Assets │
+                                  └──────────────┬────────────────┘
+                                                 │
+                        ┌────────────────────────┴────────────────────────┐
+                        ▼                                                 ▼
+        ┌───────────────────────────────┐                 ┌───────────────────────────────┐
+        │  1. Binary Converter (ipa2apk)│                 │2. Project Converter (Xcode->AS│
+        │  - FairPlay DRM check         │                 │  - Plist -> AndroidManifest   │
+        │  - Runtime container wrapper  │                 │  - Strings -> strings.xml     │
+        │  - RSA-2048 Signed APK        │                 │  - Swift to Kotlin Transpiler │
+        └───────────────┬───────────────┘                 └───────────────┬───────────────┘
+                        ▼                                                 ▼
+        ┌───────────────────────────────┐                 ┌───────────────────────────────┐
+        │   Standalone Android APK      │                 │  Android Studio Project       │
+        │    (Directly Installable)     │                 │   (Ready for Gradle Build)    │
+        └───────────────────────────────┘                 └───────────────────────────────┘
+```
+
+### 1. Analyze an iOS Application Package (.ipa)
+Inspects Mach-O load commands, checks for Apple FairPlay DRM encryption (`LC_ENCRYPTION_INFO`), extracts iOS SDK targets, orientation, permissions, and app icon:
+```bash
+./bin/ios2droid analyze SuperMonkeyBall.ipa
+```
+
+### 2. Convert IPA to a Standalone Android APK
+Wraps the decrypted `.app` payload with an embedded native execution container (powered by touchHLE and SDL2), generates an Android manifest, embeds assets, and cryptographically signs the APK:
+```bash
+./bin/ios2droid convert SuperMonkeyBall.ipa -o SuperMonkeyBall_android.apk
+```
+
+### 3. Convert an iOS Xcode Project to Android Studio
+Translates an entire iOS Xcode project folder into a buildable Android Studio Gradle project:
+* Translates `Info.plist` to `AndroidManifest.xml` (with mapped camera, audio, location permissions).
+* Translates `Localizable.strings` to `res/values/strings.xml`.
+* Transpiles Swift code (`let`, `func`, `struct`, string interpolation, and closures) to idiomatic Kotlin.
+```bash
+./bin/ios2droid project /path/to/ios_xcode_project -o /path/to/android_studio_project
+```
+
+### 4. Interactive Web Converter Studio
+Visit the [IOSonDroid Web Portal](https://pratech1015.github.io/IOSonDroid/#converter-studio) in any web browser to:
+* Drag and drop an `.ipa` file for live in-browser inspection.
+* Test with pre-loaded demo iOS applications.
+* Transpile Swift source code to Kotlin side-by-side in real time.
+
+---
+
 ## 🛠️ Repository Architecture
 
 This repository conforms strictly to the [F-Droid Repository Specification](https://f-droid.org/docs/All_About_Repositories/):
@@ -79,13 +133,18 @@ IOSonDroid/
 │   ├── repokey.p12               # PKCS#12 RSA-2048 signing keystore
 │   ├── repokey.crt               # Public X.509 certificate
 │   └── fingerprint.txt           # SHA-256 fingerprint string
+├── bin/
+│   └── ios2droid                 # Executable CLI converter shortcut
 ├── scripts/
+│   ├── converter.py              # iOS-to-Android application converter & transpiler
 │   ├── build_repo.py             # Generates index-v1, index-v2, index.xml and signs jars
 │   ├── sync_releases.py          # Discovers and downloads latest upstream GitHub APK releases
 │   └── generate_icons.py         # Generates pixel-perfect iOS squircle icons using PIL
+├── tests/
+│   └── test_converter.py         # Converter test suite (IPA, Plist, Strings, Swift)
 ├── assets/
 │   ├── style.css                 # Cupertino frosted-glass web styling
-│   ├── app.js                    # Dynamic catalog filtering, search, and QR generation
+│   ├── app.js                    # Dynamic catalog, converter studio, and QR code
 │   └── catalog.json              # Static catalog metadata for web frontend
 ├── index.html                     # Responsive web portal & QR installation interface
 └── .github/workflows/

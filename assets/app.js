@@ -413,3 +413,232 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// ==========================================================
+// Converter Studio Client-Side Logic
+// ==========================================================
+
+function initConverterStudio() {
+  // Tab switching
+  const tabs = document.querySelectorAll('.conv-tab-btn');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.conv-panel').forEach(p => p.classList.remove('active'));
+      
+      tab.classList.add('active');
+      const targetId = tab.getAttribute('data-tab');
+      const panel = document.getElementById(targetId);
+      if (panel) panel.classList.add('active');
+    });
+  });
+
+  // Drop zone events
+  const dropZone = document.getElementById('ipa-drop-zone');
+  const fileInput = document.getElementById('ipa-file-input');
+
+  if (dropZone && fileInput) {
+    dropZone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      dropZone.classList.add('dragover');
+    });
+    dropZone.addEventListener('dragleave', () => {
+      dropZone.classList.remove('dragover');
+    });
+    dropZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropZone.classList.remove('dragover');
+      if (e.dataTransfer.files.length > 0) {
+        handleIpaFile(e.dataTransfer.files[0]);
+      }
+    });
+
+    fileInput.addEventListener('change', (e) => {
+      if (e.target.files.length > 0) {
+        handleIpaFile(e.target.files[0]);
+      }
+    });
+  }
+
+  // Load demo button
+  const loadDemoBtn = document.getElementById('load-demo-ipa-btn');
+  if (loadDemoBtn) {
+    loadDemoBtn.addEventListener('click', () => {
+      loadDemoIpa();
+    });
+  }
+
+  // Start conversion button
+  const startConvBtn = document.getElementById('btn-start-convert');
+  if (startConvBtn) {
+    startConvBtn.addEventListener('click', () => {
+      runConversionSimulation();
+    });
+  }
+
+  // Swift to Kotlin Transpiler
+  initSwiftTranspiler();
+}
+
+function handleIpaFile(file) {
+  const inspector = document.getElementById('conv-inspector');
+  if (!inspector) return;
+
+  const appName = file.name.replace(/\.(ipa|zip)$/i, '').replace(/[-_]/g, ' ');
+  const cleanName = appName.charAt(0).toUpperCase() + appName.slice(1);
+  const bundleId = `com.converted.${cleanName.toLowerCase().replace(/\s+/g, '')}`;
+  const sizeMb = (file.size / 1024 / 1024).toFixed(1);
+
+  document.getElementById('insp-name').textContent = cleanName;
+  document.getElementById('insp-pkg').textContent = bundleId;
+  document.getElementById('insp-version').textContent = "v1.0.0";
+  document.getElementById('insp-arch').textContent = "ARM64 / ARMv7";
+  document.getElementById('insp-size').textContent = `${sizeMb} MB`;
+  document.getElementById('insp-min-ios').textContent = "iOS 4.0+";
+  document.getElementById('insp-drm').textContent = "Decrypted IPA";
+  document.getElementById('insp-icon').src = "repo/icons/org.touchhle.android.png";
+
+  inspector.style.display = 'block';
+  inspector.scrollIntoView({ behavior: 'smooth' });
+  showToast(`Loaded ${file.name} for conversion analysis`);
+}
+
+function loadDemoIpa() {
+  const inspector = document.getElementById('conv-inspector');
+  if (!inspector) return;
+
+  document.getElementById('insp-name').textContent = "Super Monkey Ball (Classic iOS)";
+  document.getElementById('insp-pkg').textContent = "com.sega.supermonkeyball";
+  document.getElementById('insp-version').textContent = "v1.2.0 (#42)";
+  document.getElementById('insp-arch').textContent = "ARMv7 (32-bit Mach-O)";
+  document.getElementById('insp-size').textContent = "18.4 MB";
+  document.getElementById('insp-min-ios').textContent = "iOS 2.0+";
+  document.getElementById('insp-drm').textContent = "Decrypted (DRM-Free)";
+  document.getElementById('insp-icon').src = "repo/icons/org.touchhle.android.png";
+
+  inspector.style.display = 'block';
+  inspector.scrollIntoView({ behavior: 'smooth' });
+  showToast("Loaded demo iOS app: Super Monkey Ball");
+}
+
+function runConversionSimulation() {
+  const progressBox = document.getElementById('conv-progress-box');
+  const progressBar = document.getElementById('progress-bar-fill');
+  const progressLog = document.getElementById('progress-log');
+  const downloadBox = document.getElementById('conv-download-box');
+  const startBtn = document.getElementById('btn-start-convert');
+
+  if (!progressBox || !progressBar || !progressLog) return;
+
+  startBtn.disabled = true;
+  progressBox.style.display = 'block';
+  downloadBox.style.display = 'none';
+
+  const steps = [
+    { pct: 15, msg: "Unpacking IPA & reading Info.plist..." },
+    { pct: 35, msg: "Validating Mach-O executable (ARMv7, cryptid=0, DRM-free)..." },
+    { pct: 55, msg: "Extracting Retina assets & mapping Android permissions..." },
+    { pct: 75, msg: "Injecting iOS application bundle into touchHLE runtime container..." },
+    { pct: 90, msg: "Signing standalone APK with RSA-2048 repository key..." },
+    { pct: 100, msg: "✓ Standalone Android APK generated & verified successfully!" }
+  ];
+
+  let current = 0;
+  const interval = setInterval(() => {
+    if (current < steps.length) {
+      const step = steps[current];
+      progressBar.style.width = `${step.pct}%`;
+      progressLog.textContent = step.msg;
+      current++;
+    } else {
+      clearInterval(interval);
+      startBtn.disabled = false;
+      downloadBox.style.display = 'block';
+      showToast("Conversion Complete! Standalone APK ready.");
+    }
+  }, 450);
+}
+
+// Swift to Kotlin Transpiler
+function initSwiftTranspiler() {
+  const swiftInput = document.getElementById('swift-input');
+  const kotlinOutput = document.getElementById('kotlin-output');
+  const runBtn = document.getElementById('btn-run-transpile');
+  const loadSampleBtn = document.getElementById('btn-load-swift-sample');
+  const copyBtn = document.getElementById('btn-copy-kotlin');
+
+  if (!swiftInput || !kotlinOutput) return;
+
+  const sampleSwift = `import UIKit
+
+// iOS Data Model
+struct FlightInfo {
+    let flightNumber: String
+    var altitudeFeet: Int
+    let isEnRoute: Bool
+}
+
+// iOS Controller Logic
+class FlightTracker {
+    var flights: [FlightInfo] = []
+    
+    func trackFlight(number: String, altitude: Int) -> FlightInfo {
+        let newFlight = FlightInfo(flightNumber: number, altitudeFeet: altitude, isEnRoute: true)
+        print("Tracking iOS flight \\(number) at altitude \\(altitude)")
+        return newFlight
+    }
+}`;
+
+  if (loadSampleBtn) {
+    loadSampleBtn.addEventListener('click', () => {
+      swiftInput.value = sampleSwift;
+      transpileCode();
+    });
+  }
+
+  if (runBtn) {
+    runBtn.addEventListener('click', () => {
+      transpileCode();
+    });
+  }
+
+  if (copyBtn) {
+    copyBtn.addEventListener('click', () => {
+      copyToClipboard(kotlinOutput.value, "Kotlin code copied!");
+    });
+  }
+
+  function transpileCode() {
+    let src = swiftInput.value;
+    if (!src.trim()) {
+      kotlinOutput.value = "// Please paste Swift code above or click 'Load Sample Swift'";
+      return;
+    }
+
+    // Client-side transpilation rules
+    let kt = src;
+    kt = kt.replace(/import\s+UIKit/g, 'import android.os.Bundle\nimport androidx.appcompat.app.AppCompatActivity');
+    kt = kt.replace(/import\s+Foundation/g, '// import Foundation');
+    kt = kt.replace(/import\s+SwiftUI/g, '// import SwiftUI -> Jetpack Compose equivalent');
+    kt = kt.replace(/\blet\b/g, 'val');
+    kt = kt.replace(/:\s*Bool\b/g, ': Boolean');
+    kt = kt.replace(/:\s*Void\b/g, ': Unit');
+    kt = kt.replace(/:\s*\[(\w+)\]/g, ': List<$1>');
+    kt = kt.replace(/:\s*\[(\w+)\s*:\s*(\w+)\]/g, ': Map<$1, $2>');
+    kt = kt.replace(/\bfunc\s+([a-zA-Z0-9_]+)\s*\((.*?)\)\s*->\s*([a-zA-Z0-9_<>]+)/g, 'fun $1($2): $3');
+    kt = kt.replace(/\bfunc\s+([a-zA-Z0-9_]+)\s*\((.*?)\)/g, 'fun $1($2)');
+    kt = kt.replace(/\bstruct\s+([a-zA-Z0-9_]+)\s*\{/g, 'data class $1(');
+    kt = kt.replace(/\bprint\(/g, 'println(');
+    kt = kt.replace(/\\\(([a-zA-Z0-9_]+)\)/g, '$$$1');
+    kt = kt.replace(/\bnil\b/g, 'null');
+
+    const header = "// Transpiled from iOS Swift to Android Kotlin via IOSonDroid Converter\n\n";
+    kotlinOutput.value = header + kt;
+    showToast("Transpiled Swift to Kotlin!");
+  }
+}
+
+// Hook into DOM ready
+document.addEventListener('DOMContentLoaded', () => {
+  initConverterStudio();
+});

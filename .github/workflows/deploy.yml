@@ -56,6 +56,10 @@ jobs:
         run: |
           python scripts/build_repo.py
 
+      - name: Run Converter Tests
+        run: |
+          python -m unittest tests/test_converter.py
+
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
