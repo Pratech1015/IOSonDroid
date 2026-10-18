@@ -4,7 +4,7 @@
     "description": "F-Droid repository for iOS-exclusive apps and Apple ecosystem experiences built for Android.",
     "icon": "icon.png",
     "address": "https://pratech1015.github.io/IOSonDroid/repo",
-    "timestamp": 1792324923413,
+    "timestamp": 1792326518603,
     "version": 20002,
     "fingerprint": "33F66FBCA58FC049A8D3E264E7AF414530DC8329D83BFBD9FCF0F3337879E5E0"
   },
@@ -30,8 +30,8 @@
         "Customization"
       ],
       "suggestedVersionCode": 70,
-      "added": 1792238523413,
-      "lastUpdated": 1792324923413
+      "added": 1792240118603,
+      "lastUpdated": 1792326518603
     },
     {
       "packageName": "com.bluebubbles.messaging",
@@ -50,8 +50,8 @@
         "Ecosystem"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792238523413,
-      "lastUpdated": 1792324923413
+      "added": 1792240118603,
+      "lastUpdated": 1792326518603
     },
     {
       "packageName": "com.mccal.folio",
@@ -70,8 +70,8 @@
         "Launcher"
       ],
       "suggestedVersionCode": 68,
-      "added": 1792238523413,
-      "lastUpdated": 1792324923413
+      "added": 1792240118603,
+      "lastUpdated": 1792326518603
     },
     {
       "packageName": "com.moseoridev.warpshare",
@@ -90,8 +90,8 @@
         "Tools"
       ],
       "suggestedVersionCode": 204,
-      "added": 1792238523413,
-      "lastUpdated": 1792324923413
+      "added": 1792240118603,
+      "lastUpdated": 1792326518603
     },
     {
       "packageName": "de.seemoo.at_tracking_detection",
@@ -110,8 +110,8 @@
         "Privacy"
       ],
       "suggestedVersionCode": 88,
-      "added": 1792238523413,
-      "lastUpdated": 1792324923413
+      "added": 1792240118603,
+      "lastUpdated": 1792326518603
     },
     {
       "packageName": "de.seemoo.openhaystack",
@@ -130,8 +130,8 @@
         "Tools"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792238523413,
-      "lastUpdated": 1792324923413
+      "added": 1792240118603,
+      "lastUpdated": 1792326518603
     },
     {
       "packageName": "io.iosondroid.calculator",
@@ -150,8 +150,8 @@
         "Tools"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792238523413,
-      "lastUpdated": 1792324923413
+      "added": 1792240118603,
+      "lastUpdated": 1792326518603
     },
     {
       "packageName": "io.iosondroid.controlcenter",
@@ -170,8 +170,8 @@
         "Customization"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792238523413,
-      "lastUpdated": 1792324923413
+      "added": 1792240118603,
+      "lastUpdated": 1792326518603
     },
     {
       "packageName": "io.iosondroid.notes",
@@ -190,8 +190,8 @@
         "Productivity"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792238523413,
-      "lastUpdated": 1792324923413
+      "added": 1792240118603,
+      "lastUpdated": 1792326518603
     },
     {
       "packageName": "ml.docilealligator.infinityforreddit",
@@ -210,8 +210,8 @@
         "Social"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792238523413,
-      "lastUpdated": 1792324923413
+      "added": 1792240118603,
+      "lastUpdated": 1792326518603
     },
     {
       "packageName": "org.touchhle.android",
@@ -230,8 +230,8 @@
         "Games"
       ],
       "suggestedVersionCode": 30,
-      "added": 1792238523413,
-      "lastUpdated": 1792324923413
+      "added": 1792240118603,
+      "lastUpdated": 1792326518603
     },
     {
       "packageName": "oss.krtirtho.spotube",
@@ -250,8 +250,28 @@
         "Music"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792238523413,
-      "lastUpdated": 1792324923413
+      "added": 1792240118603,
+      "lastUpdated": 1792326518603
+    },
+    {
+      "packageName": "si.savage.procreate",
+      "name": "Procreate - Digital Illustration & Painting",
+      "summary": "The award-winning iOS creative digital art studio built for Android",
+      "description": "<p>Procreate is the premier creative studio loved by millions of digital artists and illustrators. Packaged and converted for Android devices using the IOSonDroid standalone compatibility engine.<br/><br/>Features:<br/>* Ultra-high definition canvases and responsive touch sketching<br/>* Advanced Valkyrie brush engine with customizable pressure curve<br/>* Full layer system with 25 layer blend modes and clipping masks<br/>* Continuous autosave so you never lose your artwork<br/>* Bluetooth stylus pressure and tilt sensitivity support<br/>* Comprehensive export formats (PSD, TIFF, transparent PNG, multi-page PDF)<br/>* 4K time-lapse recording and replay support</p>",
+      "icon": "si.savage.procreate.png",
+      "license": "Proprietary / Open Compatibility Container",
+      "authorName": "Savage Interactive Pty Ltd & IOSonDroid Team",
+      "webSite": "https://procreate.com",
+      "sourceCode": "https://github.com/Pratech1015/IOSonDroid",
+      "issueTracker": "https://github.com/Pratech1015/IOSonDroid/issues",
+      "changelog": "https://procreate.com/updates",
+      "categories": [
+        "Graphics",
+        "Productivity"
+      ],
+      "suggestedVersionCode": 5350,
+      "added": 1792240118603,
+      "lastUpdated": 1792326518603
     }
   ],
   "packages": {
@@ -267,7 +287,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
-        "added": 1792324923446
+        "added": 1792326518624
       }
     ],
     "com.mccal.folio": [
@@ -282,7 +302,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
-        "added": 1792324923454
+        "added": 1792326518631
       }
     ],
     "com.moseoridev.warpshare": [
@@ -297,7 +317,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
-        "added": 1792324923492
+        "added": 1792326518664
       }
     ],
     "de.seemoo.at_tracking_detection": [
@@ -312,7 +332,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
-        "added": 1792324923503
+        "added": 1792326518673
       }
     ],
     "org.touchhle.android": [
@@ -327,7 +347,22 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "282dec2c81cee85709a04b6edf6c7717592b33f40c8599990e191ba429254c67",
-        "added": 1792324923524
+        "added": 1792326518691
+      }
+    ],
+    "si.savage.procreate": [
+      {
+        "packageName": "si.savage.procreate",
+        "versionCode": 5350,
+        "versionName": "5.3.5",
+        "apkName": "si.savage.procreate_5350.apk",
+        "hash": "eb9cc03debe0ec0d800071bf334e0439f3788c147b06b262448cfe6d461c38d7",
+        "hashType": "sha256",
+        "size": 19977733,
+        "minSdkVersion": 21,
+        "targetSdkVersion": 34,
+        "signer": "30f3979db8ff40b4271663c9709e68d3f0f84e5f98590fbccfe34d75f957462b",
+        "added": 1792326518706
       }
     ]
   }

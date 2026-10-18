@@ -14,7 +14,7 @@
       }
     },
     "address": "https://pratech1015.github.io/IOSonDroid/repo",
-    "timestamp": 1792324923413
+    "timestamp": 1792326518603
   },
   "packages": {
     "com.agupta07505.smartisland": {
@@ -46,7 +46,7 @@
       },
       "versions": {
         "981d9b2fe02d15535309f378a789d96ff67465a0df074c0feeffa80337ce887c": {
-          "added": 1792324923446,
+          "added": 1792326518624,
           "file": {
             "name": "/com.agupta07505.smartisland_70.apk",
             "sha256": "981d9b2fe02d15535309f378a789d96ff67465a0df074c0feeffa80337ce887c",
@@ -124,7 +124,7 @@
       },
       "versions": {
         "79cf398c4ff985e4df9ba0c1056a591c6a5ae1ccc972f3ce482abb2b4bbee63a": {
-          "added": 1792324923454,
+          "added": 1792326518631,
           "file": {
             "name": "/com.mccal.folio_68.apk",
             "sha256": "79cf398c4ff985e4df9ba0c1056a591c6a5ae1ccc972f3ce482abb2b4bbee63a",
@@ -173,7 +173,7 @@
       },
       "versions": {
         "fb5035594d04341b9987d1797543181bcc70b77426cb9db3160224a8ed131aae": {
-          "added": 1792324923492,
+          "added": 1792326518664,
           "file": {
             "name": "/com.moseoridev.warpshare_204.apk",
             "sha256": "fb5035594d04341b9987d1797543181bcc70b77426cb9db3160224a8ed131aae",
@@ -222,7 +222,7 @@
       },
       "versions": {
         "6fd3e5d1c3c1255f44ac29ed27e50fba760180dcdc4f452d7560c1e28ca12a93": {
-          "added": 1792324923503,
+          "added": 1792326518673,
           "file": {
             "name": "/de.seemoo.at_tracking_detection_88.apk",
             "sha256": "6fd3e5d1c3c1255f44ac29ed27e50fba760180dcdc4f452d7560c1e28ca12a93",
@@ -416,7 +416,7 @@
       },
       "versions": {
         "33850dcd7cc67c98acf8b15d772f58f777b82c4a5a67e9ebe1be3d8501791372": {
-          "added": 1792324923524,
+          "added": 1792326518691,
           "file": {
             "name": "/org.touchhle.android_30.apk",
             "sha256": "33850dcd7cc67c98acf8b15d772f58f777b82c4a5a67e9ebe1be3d8501791372",
@@ -464,6 +464,55 @@
         }
       },
       "versions": {}
+    },
+    "si.savage.procreate": {
+      "metadata": {
+        "name": {
+          "en-US": "Procreate - Digital Illustration & Painting"
+        },
+        "summary": {
+          "en-US": "The award-winning iOS creative digital art studio built for Android"
+        },
+        "description": {
+          "en-US": "Procreate is the premier creative studio loved by millions of digital artists and illustrators. Packaged and converted for Android devices using the IOSonDroid standalone compatibility engine.\n\nFeatures:\n* Ultra-high definition canvases and responsive touch sketching\n* Advanced Valkyrie brush engine with customizable pressure curve\n* Full layer system with 25 layer blend modes and clipping masks\n* Continuous autosave so you never lose your artwork\n* Bluetooth stylus pressure and tilt sensitivity support\n* Comprehensive export formats (PSD, TIFF, transparent PNG, multi-page PDF)\n* 4K time-lapse recording and replay support"
+        },
+        "categories": [
+          "Graphics",
+          "Productivity"
+        ],
+        "license": "Proprietary / Open Compatibility Container",
+        "webSite": "https://procreate.com",
+        "sourceCode": "https://github.com/Pratech1015/IOSonDroid",
+        "issueTracker": "https://github.com/Pratech1015/IOSonDroid/issues",
+        "icon": {
+          "en-US": {
+            "name": "/icons/si.savage.procreate.png",
+            "sha256": "f85acfc1d8b2a32007ff550bd3708d24628e1471a5ddf702f6f7978c6ce2a512",
+            "size": 6645
+          }
+        }
+      },
+      "versions": {
+        "eb9cc03debe0ec0d800071bf334e0439f3788c147b06b262448cfe6d461c38d7": {
+          "added": 1792326518706,
+          "file": {
+            "name": "/si.savage.procreate_5350.apk",
+            "sha256": "eb9cc03debe0ec0d800071bf334e0439f3788c147b06b262448cfe6d461c38d7",
+            "size": 19977733
+          },
+          "manifest": {
+            "versionName": "5.3.5",
+            "versionCode": 5350,
+            "minSdkVersion": 21,
+            "targetSdkVersion": 34,
+            "signer": {
+              "sha256": [
+                "30f3979db8ff40b4271663c9709e68d3f0f84e5f98590fbccfe34d75f957462b"
+              ]
+            }
+          }
+        }
+      }
     }
   }
 }

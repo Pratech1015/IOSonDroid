@@ -214,6 +214,41 @@ def draw_infinity_icon():
     draw.arc([186, 206, 326, 306], start=200, end=320, fill=(255, 255, 255, 180), width=8)
     return img
 
+def draw_procreate_icon():
+    # Procreate: Dark canvas with vibrant neon artistic curved brush stroke
+    img, _ = make_ios_squircle((512, 512), (28, 28, 34), (14, 14, 18))
+    draw = ImageDraw.Draw(img)
+    
+    # Curved multi-color brush ribbon
+    ribbon_segments = [
+        ((110, 390), (160, 320), (175, 82, 222), 26),   # Purple/Violet
+        ((160, 320), (210, 240), (255, 45, 85), 32),    # Neon Pink / Magenta
+        ((210, 240), (265, 175), (255, 149, 0), 34),   # Bright Orange
+        ((265, 175), (325, 135), (255, 204, 0), 30),   # Golden Yellow
+        ((325, 135), (385, 120), (52, 199, 89), 24),   # Neon Green
+        ((385, 120), (430, 130), (0, 199, 255), 18),   # Electric Cyan
+    ]
+    for (p1, p2, col, w) in ribbon_segments:
+        draw.line([p1, p2], fill=col + (245,), width=w)
+        draw.line([(p1[0]+2, p1[1]-2), (p2[0]+2, p2[1]-2)], fill=(255, 255, 255, 90), width=max(4, w // 4))
+
+    # Paint splatters / artistic brush points
+    splatters = [
+        (130, 340, 5, (175, 82, 222)),
+        (185, 280, 7, (255, 45, 85)),
+        (240, 205, 8, (255, 149, 0)),
+        (300, 150, 6, (255, 204, 0)),
+        (360, 125, 5, (52, 199, 89)),
+        (405, 122, 4, (0, 199, 255)),
+        (420, 145, 3, (0, 122, 255)),
+    ]
+    for (x, y, r, col) in splatters:
+        draw.ellipse([x-r, y-r, x+r, y+r], fill=col + (230,))
+
+    # Brush tip stylus feathering effect
+    draw.polygon([(100, 405), (125, 375), (115, 395)], fill=(175, 82, 222, 255))
+    return img
+
 def draw_repo_icon():
     # IOSonDroid Logo: Apple shape combined with Android droid antennas & Cupertino blue
     img, _ = make_ios_squircle((512, 512), (0, 122, 255), (88, 86, 214))
@@ -238,6 +273,7 @@ def draw_repo_icon():
 def main():
     icons = {
         'org.touchhle.android.png': draw_touchhle_icon(),
+        'si.savage.procreate.png': draw_procreate_icon(),
         'com.bluebubbles.messaging.png': draw_bluebubbles_icon(),
         'com.moseoridev.warpshare.png': draw_warpshare_icon(),
         'de.seemoo.at_tracking_detection.png': draw_airguard_icon(),

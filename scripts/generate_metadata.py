@@ -13,6 +13,30 @@ os.makedirs(METADATA_DIR, exist_ok=True)
 
 APPS_METADATA = [
     {
+        "packageName": "si.savage.procreate",
+        "Name": "Procreate - Digital Illustration & Painting",
+        "Summary": "The award-winning iOS creative digital art studio built for Android",
+        "Categories": ["Graphics", "Productivity"],
+        "License": "Proprietary / Open Compatibility Container",
+        "AuthorName": "Savage Interactive Pty Ltd & IOSonDroid Team",
+        "WebSite": "https://procreate.com",
+        "SourceCode": "https://github.com/Pratech1015/IOSonDroid",
+        "IssueTracker": "https://github.com/Pratech1015/IOSonDroid/issues",
+        "Changelog": "https://procreate.com/updates",
+        "Description": (
+            "Procreate is the premier creative studio loved by millions of digital artists and illustrators. "
+            "Packaged and converted for Android devices using the IOSonDroid standalone compatibility engine.\n\n"
+            "Features:\n"
+            "* Ultra-high definition canvases and responsive touch sketching\n"
+            "* Advanced Valkyrie brush engine with customizable pressure curve\n"
+            "* Full layer system with 25 layer blend modes and clipping masks\n"
+            "* Continuous autosave so you never lose your artwork\n"
+            "* Bluetooth stylus pressure and tilt sensitivity support\n"
+            "* Comprehensive export formats (PSD, TIFF, transparent PNG, multi-page PDF)\n"
+            "* 4K time-lapse recording and replay support"
+        )
+    },
+    {
         "packageName": "org.touchhle.android",
         "Name": "touchHLE - iOS App Emulator",
         "Summary": "High-level emulator for early iPhone OS / iOS apps and games",

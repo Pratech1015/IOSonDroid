@@ -39,6 +39,7 @@ REPO_DESCRIPTION = 'F-Droid repository for iOS-exclusive apps and Apple ecosyste
 
 # Known versions mapping for official releases
 VERSION_MAPPINGS = {
+    "si.savage.procreate": {5350: "5.3.5", 39012: "5.3.5"},
     "org.touchhle.android": {30: "0.3.0", 20: "0.2.2"},
     "com.moseoridev.warpshare": {204: "2.0.4", 200: "2.0.0"},
     "de.seemoo.at_tracking_detection": {88: "3.1.3", 87: "3.1.2"},
