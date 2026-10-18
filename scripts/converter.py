@@ -359,9 +359,14 @@ IOS_TO_ANDROID_PERMISSIONS = {
     "NSLocationAlwaysUsageDescription": "android.permission.ACCESS_FINE_LOCATION",
     "NSMicrophoneUsageDescription": "android.permission.RECORD_AUDIO",
     "NSPhotoLibraryUsageDescription": "android.permission.READ_MEDIA_IMAGES",
+    "NSPhotoLibraryAddUsageDescription": "android.permission.WRITE_EXTERNAL_STORAGE",
     "NSBluetoothAlwaysUsageDescription": "android.permission.BLUETOOTH_CONNECT",
+    "NSBluetoothPeripheralUsageDescription": "android.permission.BLUETOOTH",
     "NSContactsUsageDescription": "android.permission.READ_CONTACTS",
-    "NSCalendarsUsageDescription": "android.permission.READ_CALENDAR"
+    "NSCalendarsUsageDescription": "android.permission.READ_CALENDAR",
+    "NSFaceIDUsageDescription": "android.permission.USE_BIOMETRIC",
+    "NSSpeechRecognitionUsageDescription": "android.permission.RECORD_AUDIO",
+    "NSAppleMusicUsageDescription": "android.permission.READ_MEDIA_AUDIO"
 }
 
 def convert_plist_to_manifest(plist_path, output_manifest_path=None):
@@ -488,9 +493,16 @@ SWIFT_TYPE_MAP = {
     "Int": "Int",
     "Double": "Double",
     "Float": "Float",
+    "CGFloat": "Float",
     "Bool": "Boolean",
     "Any": "Any",
-    "Void": "Unit"
+    "Void": "Unit",
+    "CGPoint": "PointF",
+    "CGSize": "SizeF",
+    "CGRect": "RectF",
+    "UIColor": "Color",
+    "UIBezierPath": "Path",
+    "CGContext": "Canvas"
 }
 
 def transpile_swift_to_kotlin(swift_code):
@@ -501,24 +513,25 @@ def transpile_swift_to_kotlin(swift_code):
     kotlin = swift_code
 
     # 1. Imports
-    kotlin = re.sub(r'import\s+UIKit', 'import android.os.Bundle\nimport androidx.appcompat.app.AppCompatActivity', kotlin)
+    kotlin = re.sub(r'import\s+UIKit', 'import android.os.Bundle\nimport androidx.appcompat.app.AppCompatActivity\nimport android.graphics.Color\nimport android.graphics.PointF\nimport android.graphics.RectF\nimport android.graphics.Canvas\nimport android.graphics.Paint\nimport android.graphics.Path', kotlin)
+    kotlin = re.sub(r'import\s+CoreGraphics', '// import CoreGraphics (mapped to android.graphics.*)', kotlin)
     kotlin = re.sub(r'import\s+Foundation', '// import Foundation', kotlin)
     kotlin = re.sub(r'import\s+SwiftUI', '// import SwiftUI (Compose equivalent)', kotlin)
 
     # 2. Variable declarations: let -> val, var -> var
     kotlin = re.sub(r'\blet\b', 'val', kotlin)
 
-    # 3. Types: Bool -> Boolean, Void -> Unit
-    for s_type, k_type in SWIFT_TYPE_MAP.items():
-        kotlin = re.sub(rf':\s*{s_type}\b', f': {k_type}', kotlin)
+    # 3. Functions: func name(param: Type) -> Ret -> fun name(param: Type): Ret
+    kotlin = re.sub(r'\bfunc\s+([a-zA-Z0-9_]+)\s*\((.*?)\)\s*->\s*([a-zA-Z0-9_<>]+)', r'fun \1(\2): \3', kotlin)
+    kotlin = re.sub(r'\bfunc\s+([a-zA-Z0-9_]+)\s*\((.*?)\)', r'fun \1(\2)', kotlin)
 
     # 4. Arrays: [T] -> List<T>, Dictionaries: [K: V] -> Map<K, V>
     kotlin = re.sub(r':\s*\[(\w+)\]', r': List<\1>', kotlin)
     kotlin = re.sub(r':\s*\[(\w+)\s*:\s*(\w+)\]', r': Map<\1, \2>', kotlin)
 
-    # 5. Functions: func name(param: Type) -> Ret -> fun name(param: Type): Ret
-    kotlin = re.sub(r'\bfunc\s+([a-zA-Z0-9_]+)\s*\((.*?)\)\s*->\s*([a-zA-Z0-9_<>]+)', r'fun \1(\2): \3', kotlin)
-    kotlin = re.sub(r'\bfunc\s+([a-zA-Z0-9_]+)\s*\((.*?)\)', r'fun \1(\2)', kotlin)
+    # 5. Types: Bool -> Boolean, Void -> Unit
+    for s_type, k_type in SWIFT_TYPE_MAP.items():
+        kotlin = re.sub(rf':\s*{s_type}\b', f': {k_type}', kotlin)
 
     # 6. Struct -> data class
     kotlin = re.sub(r'\bstruct\s+([a-zA-Z0-9_]+)\s*\{', r'data class \1(', kotlin)
@@ -526,8 +539,9 @@ def transpile_swift_to_kotlin(swift_code):
     # 7. Print: print(...) -> println(...)
     kotlin = re.sub(r'\bprint\(', 'println(', kotlin)
 
-    # 8. String interpolation: "\(val)" -> "$val"
+    # 8. String interpolation: "\(val)" -> "$val", "\(obj.prop)" -> "${obj.prop}"
     kotlin = re.sub(r'\\\(([a-zA-Z0-9_]+)\)', r'$\1', kotlin)
+    kotlin = re.sub(r'\\\(([a-zA-Z0-9_.]+)\)', r'${\1}', kotlin)
 
     # 9. Guard let x = opt else { return } -> val x = opt ?: return
     kotlin = re.sub(r'guard\s+val\s+([a-zA-Z0-9_]+)\s*=\s*(.*?)\s+else\s*\{\s*return(\s*.*?)\s*\}', r'val \1 = \2 ?: return\3', kotlin)
@@ -701,6 +715,11 @@ Examples:
     p_strings.add_argument("strings", help="Path to Localizable.strings")
     p_strings.add_argument("-o", "--output", default="strings.xml", help="Output strings.xml path")
 
+    # Swift Transpiler
+    p_swift = subparsers.add_parser("swift2kt", help="Transpile Swift source code to Kotlin")
+    p_swift.add_argument("swift", help="Path to .swift source file")
+    p_swift.add_argument("-o", "--output", help="Output .kt file path (prints to stdout if omitted)")
+
     args = parser.parse_args()
 
     if not args.command:
@@ -737,6 +756,18 @@ Examples:
 
     elif args.command == "strings2xml":
         convert_strings_to_xml(args.strings, args.output)
+
+    elif args.command == "swift2kt":
+        with open(args.swift, 'r', encoding='utf-8', errors='replace') as sf:
+            swift_src = sf.read()
+        kt_src = transpile_swift_to_kotlin(swift_src)
+        if args.output:
+            os.makedirs(os.path.dirname(os.path.abspath(args.output)), exist_ok=True)
+            with open(args.output, 'w', encoding='utf-8') as kf:
+                kf.write(kt_src)
+            print(f"[+] Transpiled Swift -> Kotlin: {args.output}")
+        else:
+            print(kt_src)
 
 
 if __name__ == "__main__":

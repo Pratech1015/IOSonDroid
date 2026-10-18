@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDisplayName</key>
+	<string>Procreate</string>
+	<key>CFBundleName</key>
+	<string>Procreate</string>
+	<key>CFBundleIdentifier</key>
+	<string>si.savage.procreate</string>
+	<key>CFBundleShortVersionString</key>
+	<string>5.3.5</string>
+	<key>CFBundleVersion</key>
+	<string>39012</string>
+	<key>MinimumOSVersion</key>
+	<string>15.4</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Procreate needs access to your photos to import canvases and export artwork.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Procreate needs access to save artworks and time-lapses to your Photos.</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Procreate connects to supported pressure-sensitive styluses.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Procreate pairs with smart Bluetooth styluses.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Procreate uses the camera for Face Paint and AR canvas projection.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Procreate records audio for time-lapse video replay commentary.</string>
+	<key>UIFileSharingEnabled</key>
+	<true/>
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+	<true/>
+</dict>
+</plist>

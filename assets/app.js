@@ -279,22 +279,33 @@ function initSwiftTranspiler() {
   if (!swiftInput || !kotlinOutput) return;
 
   const sampleSwift = `import UIKit
+import CoreGraphics
 
-// iOS Data Model
-struct FlightInfo {
-    let flightNumber: String
-    var altitudeFeet: Int
-    let isEnRoute: Bool
+// Procreate Brush & Pressure Point Model
+struct BrushStrokePoint {
+    let location: CGPoint
+    let pressure: CGFloat
+    let tilt: Float
+    let timestamp: Double
 }
 
-// iOS Controller Logic
-class FlightTracker {
-    var flights: [FlightInfo] = []
+struct ProcreateBrush {
+    let name: String
+    let diameter: Float
+    let spacing: Float
+    let opacity: Float
+    let color: UIColor
+}
+
+// Procreate Canvas Drawing Engine
+class CanvasDrawingEngine {
+    var activeBrush: ProcreateBrush?
+    var points: [BrushStrokePoint] = []
     
-    func trackFlight(number: String, altitude: Int) -> FlightInfo {
-        let newFlight = FlightInfo(flightNumber: number, altitudeFeet: altitude, isEnRoute: true)
-        print("Tracking iOS flight \\(number) at altitude \\(altitude)")
-        return newFlight
+    func renderStroke(point: BrushStrokePoint, context: CGContext) -> Bool {
+        guard let brush = activeBrush else { return false }
+        print("Rendering brush stroke at (\\(point.location.x), \\(point.location.y)) with pressure: \\(point.pressure)")
+        return true
     }
 }`;
 
@@ -325,19 +336,34 @@ class FlightTracker {
     }
 
     let kt = src;
-    kt = kt.replace(/import\s+UIKit/g, 'import android.os.Bundle\nimport androidx.appcompat.app.AppCompatActivity');
+    kt = kt.replace(/import\s+UIKit/g, 'import android.os.Bundle\nimport androidx.appcompat.app.AppCompatActivity\nimport android.graphics.Color\nimport android.graphics.PointF\nimport android.graphics.RectF\nimport android.graphics.Canvas\nimport android.graphics.Paint\nimport android.graphics.Path');
+    kt = kt.replace(/import\s+CoreGraphics/g, '// import CoreGraphics (mapped to android.graphics.*)');
     kt = kt.replace(/import\s+Foundation/g, '// import Foundation');
     kt = kt.replace(/import\s+SwiftUI/g, '// import SwiftUI -> Jetpack Compose equivalent');
     kt = kt.replace(/\blet\b/g, 'val');
+    
+    // Function signatures
+    kt = kt.replace(/\bfunc\s+([a-zA-Z0-9_]+)\s*\((.*?)\)\s*->\s*([a-zA-Z0-9_<>]+)/g, 'fun $1($2): $3');
+    kt = kt.replace(/\bfunc\s+([a-zA-Z0-9_]+)\s*\((.*?)\)/g, 'fun $1($2)');
+    
+    // Types
+    kt = kt.replace(/:\s*CGFloat\b/g, ': Float');
+    kt = kt.replace(/:\s*CGPoint\b/g, ': PointF');
+    kt = kt.replace(/:\s*CGSize\b/g, ': SizeF');
+    kt = kt.replace(/:\s*CGRect\b/g, ': RectF');
+    kt = kt.replace(/:\s*UIColor\b/g, ': Color');
+    kt = kt.replace(/:\s*CGContext\b/g, ': Canvas');
+    kt = kt.replace(/:\s*UIBezierPath\b/g, ': Path');
     kt = kt.replace(/:\s*Bool\b/g, ': Boolean');
     kt = kt.replace(/:\s*Void\b/g, ': Unit');
     kt = kt.replace(/:\s*\[(\w+)\]/g, ': List<$1>');
     kt = kt.replace(/:\s*\[(\w+)\s*:\s*(\w+)\]/g, ': Map<$1, $2>');
-    kt = kt.replace(/\bfunc\s+([a-zA-Z0-9_]+)\s*\((.*?)\)\s*->\s*([a-zA-Z0-9_<>]+)/g, 'fun $1($2): $3');
-    kt = kt.replace(/\bfunc\s+([a-zA-Z0-9_]+)\s*\((.*?)\)/g, 'fun $1($2)');
+    
     kt = kt.replace(/\bstruct\s+([a-zA-Z0-9_]+)\s*\{/g, 'data class $1(');
     kt = kt.replace(/\bprint\(/g, 'println(');
     kt = kt.replace(/\\\(([a-zA-Z0-9_]+)\)/g, '$$$1');
+    kt = kt.replace(/\\\(([a-zA-Z0-9_.]+)\)/g, '$${$1}');
+    kt = kt.replace(/guard\s+val\s+([a-zA-Z0-9_]+)\s*=\s*(.*?)\s+else\s*\{\s*return(\s*.*?)\s*\}/g, 'val $1 = $2 ?: return$3');
     kt = kt.replace(/\bnil\b/g, 'null');
 
     const header = "// Transpiled from iOS Swift to Android Kotlin via IOSonDroid Converter\n\n";

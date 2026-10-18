@@ -4,7 +4,7 @@
     "description": "F-Droid repository for iOS-exclusive apps and Apple ecosystem experiences built for Android.",
     "icon": "icon.png",
     "address": "https://pratech1015.github.io/IOSonDroid/repo",
-    "timestamp": 1792324190933,
+    "timestamp": 1792324923413,
     "version": 20002,
     "fingerprint": "33F66FBCA58FC049A8D3E264E7AF414530DC8329D83BFBD9FCF0F3337879E5E0"
   },
@@ -30,8 +30,8 @@
         "Customization"
       ],
       "suggestedVersionCode": 70,
-      "added": 1792237790933,
-      "lastUpdated": 1792324190933
+      "added": 1792238523413,
+      "lastUpdated": 1792324923413
     },
     {
       "packageName": "com.bluebubbles.messaging",
@@ -50,8 +50,8 @@
         "Ecosystem"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792237790933,
-      "lastUpdated": 1792324190933
+      "added": 1792238523413,
+      "lastUpdated": 1792324923413
     },
     {
       "packageName": "com.mccal.folio",
@@ -70,8 +70,8 @@
         "Launcher"
       ],
       "suggestedVersionCode": 68,
-      "added": 1792237790933,
-      "lastUpdated": 1792324190933
+      "added": 1792238523413,
+      "lastUpdated": 1792324923413
     },
     {
       "packageName": "com.moseoridev.warpshare",
@@ -90,8 +90,8 @@
         "Tools"
       ],
       "suggestedVersionCode": 204,
-      "added": 1792237790933,
-      "lastUpdated": 1792324190933
+      "added": 1792238523413,
+      "lastUpdated": 1792324923413
     },
     {
       "packageName": "de.seemoo.at_tracking_detection",
@@ -110,8 +110,8 @@
         "Privacy"
       ],
       "suggestedVersionCode": 88,
-      "added": 1792237790933,
-      "lastUpdated": 1792324190933
+      "added": 1792238523413,
+      "lastUpdated": 1792324923413
     },
     {
       "packageName": "de.seemoo.openhaystack",
@@ -130,8 +130,8 @@
         "Tools"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792237790933,
-      "lastUpdated": 1792324190933
+      "added": 1792238523413,
+      "lastUpdated": 1792324923413
     },
     {
       "packageName": "io.iosondroid.calculator",
@@ -150,8 +150,8 @@
         "Tools"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792237790933,
-      "lastUpdated": 1792324190933
+      "added": 1792238523413,
+      "lastUpdated": 1792324923413
     },
     {
       "packageName": "io.iosondroid.controlcenter",
@@ -170,8 +170,8 @@
         "Customization"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792237790933,
-      "lastUpdated": 1792324190933
+      "added": 1792238523413,
+      "lastUpdated": 1792324923413
     },
     {
       "packageName": "io.iosondroid.notes",
@@ -190,8 +190,8 @@
         "Productivity"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792237790933,
-      "lastUpdated": 1792324190933
+      "added": 1792238523413,
+      "lastUpdated": 1792324923413
     },
     {
       "packageName": "ml.docilealligator.infinityforreddit",
@@ -210,8 +210,8 @@
         "Social"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792237790933,
-      "lastUpdated": 1792324190933
+      "added": 1792238523413,
+      "lastUpdated": 1792324923413
     },
     {
       "packageName": "org.touchhle.android",
@@ -230,8 +230,8 @@
         "Games"
       ],
       "suggestedVersionCode": 30,
-      "added": 1792237790933,
-      "lastUpdated": 1792324190933
+      "added": 1792238523413,
+      "lastUpdated": 1792324923413
     },
     {
       "packageName": "oss.krtirtho.spotube",
@@ -250,8 +250,8 @@
         "Music"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792237790933,
-      "lastUpdated": 1792324190933
+      "added": 1792238523413,
+      "lastUpdated": 1792324923413
     }
   ],
   "packages": {
@@ -267,7 +267,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
-        "added": 1792324190953
+        "added": 1792324923446
       }
     ],
     "com.mccal.folio": [
@@ -282,7 +282,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
-        "added": 1792324190960
+        "added": 1792324923454
       }
     ],
     "com.moseoridev.warpshare": [
@@ -297,7 +297,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
-        "added": 1792324190992
+        "added": 1792324923492
       }
     ],
     "de.seemoo.at_tracking_detection": [
@@ -312,7 +312,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
-        "added": 1792324191000
+        "added": 1792324923503
       }
     ],
     "org.touchhle.android": [
@@ -327,7 +327,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "282dec2c81cee85709a04b6edf6c7717592b33f40c8599990e191ba429254c67",
-        "added": 1792324191022
+        "added": 1792324923524
       }
     ]
   }
