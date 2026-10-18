@@ -9,7 +9,6 @@ Generates:
 - repo/index.xml     (F-Droid legacy XML index)
 - repo/index.jar     (Cryptographically signed JAR index)
 - repo/index-v1.jar  (Cryptographically signed JAR index v1)
-- assets/catalog.json (Static web catalog for index.html frontend)
 """
 
 import os
@@ -29,7 +28,6 @@ from cryptography.hazmat.backends import default_backend
 REPO_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'repo'))
 METADATA_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'metadata'))
 KEYSTORE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'keystore'))
-ASSETS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'assets'))
 
 KEYSTORE_PATH = os.path.join(KEYSTORE_DIR, 'repokey.p12')
 KEYSTORE_PASS = 'iosondroid-repo-key'
@@ -379,40 +377,6 @@ def main():
         z.write(index_v1_path, 'index-v1.json')
     sign_jar(index_v1_jar_path)
     
-    # Generate static web catalog.json for frontend
-    os.makedirs(ASSETS_DIR, exist_ok=True)
-    catalog = []
-    for pkg, meta in metadata.items():
-        pkgs = packages_dict.get(pkg, [])
-        apk_info = pkgs[0] if pkgs else None
-        
-        default_version = VERSION_MAPPINGS.get(pkg, {}).get(list(VERSION_MAPPINGS.get(pkg, {}).keys())[0], "1.0.0") if VERSION_MAPPINGS.get(pkg) else "1.0.0"
-        default_vc = list(VERSION_MAPPINGS.get(pkg, {}).keys())[0] if VERSION_MAPPINGS.get(pkg) else 1
-        
-        catalog.append({
-            "packageName": pkg,
-            "name": meta.get("Name", pkg),
-            "summary": meta.get("Summary", ""),
-            "description": meta.get("Description", ""),
-            "icon": f"repo/icons/{pkg}.png",
-            "categories": meta.get("Categories", ["Tools"]),
-            "license": meta.get("License", "Unknown"),
-            "authorName": meta.get("AuthorName", ""),
-            "webSite": meta.get("WebSite", ""),
-            "sourceCode": meta.get("SourceCode", ""),
-            "issueTracker": meta.get("IssueTracker", ""),
-            "hasApk": apk_info is not None,
-            "apkName": apk_info['apkName'] if apk_info else None,
-            "apkSize": apk_info['size'] if apk_info else None,
-            "versionName": apk_info['versionName'] if apk_info else default_version,
-            "versionCode": apk_info['versionCode'] if apk_info else default_vc,
-            "sha256": apk_info['hash'] if apk_info else None
-        })
-        
-    catalog_path = os.path.join(ASSETS_DIR, 'catalog.json')
-    with open(catalog_path, 'w', encoding='utf-8') as f:
-        json.dump(catalog, f, indent=2, ensure_ascii=False)
-    print(f"Wrote frontend catalog: {catalog_path}")
     print("=== Build Complete! ===")
 
 if __name__ == '__main__':

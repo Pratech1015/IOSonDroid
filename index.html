@@ -273,38 +273,7 @@
       </div>
     </section>
 
-    <!-- App Catalog Section -->
-    <section class="catalog-header">
-      <div class="catalog-title-row">
-        <div>
-          <h2>App Catalog</h2>
-          <div class="app-counter" id="app-counter">Loading apps...</div>
-        </div>
-      </div>
 
-      <div class="search-box">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="8"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-        <input type="text" id="search-input" class="search-input" placeholder="Search iOS apps, emulators, tools, or package names..." autocomplete="off" />
-      </div>
-
-      <div class="category-pills">
-        <button class="pill active" data-category="all">All Apps</button>
-        <button class="pill" data-category="emulation">Emulation & Core</button>
-        <button class="pill" data-category="connectivity">AirDrop & Find My</button>
-        <button class="pill" data-category="communication">iMessage & Chat</button>
-        <button class="pill" data-category="system">Dynamic Island & UI</button>
-        <button class="pill" data-category="stock apps">Cupertino Stock Apps</button>
-        <button class="pill" data-category="multimedia">Music & Media</button>
-      </div>
-    </section>
-
-    <!-- App Grid -->
-    <section class="app-grid" id="apps-grid">
-      <!-- Dynamic cards rendered by app.js -->
-    </section>
 
     <!-- Setup Guide Section -->
     <section class="guide-section" id="setup-guide">
@@ -372,7 +341,7 @@
         <ul class="steps-list">
           <li>
             <div class="step-num">1</div>
-            <div>Browse the catalog above and tap <strong>Download APK</strong> on any desired app.</div>
+            <div>Use the <strong>iOS to Android Converter</strong> above to convert your iOS <code>.ipa</code> or Xcode project into a signed APK.</div>
           </li>
           <li>
             <div class="step-num">2</div>
@@ -380,66 +349,12 @@
           </li>
           <li>
             <div class="step-num">3</div>
-            <div>Tap Install to enjoy the iOS app experience on your Android smartphone!</div>
+            <div>Tap Install to enjoy the iOS application natively on your Android smartphone!</div>
           </li>
         </ul>
       </div>
     </section>
   </main>
-
-  <!-- App Detail Modal -->
-  <div class="modal-overlay" id="app-modal">
-    <div class="modal-content">
-      <button class="modal-close" onclick="closeAppModal()" aria-label="Close modal">&times;</button>
-      <div class="modal-header">
-        <img src="repo/icon.png" alt="App Icon" class="modal-icon" id="modal-icon" />
-        <div class="modal-meta">
-          <h2 id="modal-title">App Name</h2>
-          <div style="color: var(--text-tertiary); font-size: 0.88rem;" id="modal-author">Author</div>
-        </div>
-      </div>
-      <div class="modal-body">
-        <p id="modal-summary" style="font-weight: 600; color: var(--text-primary);"></p>
-        <p id="modal-description"></p>
-        
-        <table class="modal-table">
-          <tr>
-            <th>Package ID</th>
-            <td><code id="modal-pkg"></code></td>
-          </tr>
-          <tr>
-            <th>Version</th>
-            <td id="modal-version"></td>
-          </tr>
-          <tr>
-            <th>File Size</th>
-            <td id="modal-size"></td>
-          </tr>
-          <tr>
-            <th>License</th>
-            <td id="modal-license"></td>
-          </tr>
-          <tr>
-            <th>SHA-256 Checksum</th>
-            <td><code id="modal-sha256"></code></td>
-          </tr>
-        </table>
-
-        <div style="display: flex; gap: 12px; margin-top: 14px; flex-wrap: wrap;">
-          <a href="#" class="btn btn-primary" id="modal-download-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download APK
-          </a>
-          <a href="#" target="_blank" rel="noopener" class="btn btn-secondary" id="modal-source-link">
-            GitHub Source
-          </a>
-          <a href="#" target="_blank" rel="noopener" class="btn btn-secondary" id="modal-web-link">
-            Website
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Toast Notification -->
   <div class="toast" id="toast">
