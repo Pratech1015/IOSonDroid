@@ -1,0 +1,27 @@
+packageName: oss.krtirtho.spotube
+Name: Spotube - Apple Music Experience
+Summary: Apple Music-inspired music client with synced lyrics and Cupertino UI
+Categories:
+- Multimedia
+- Music
+License: GPL-3.0-or-later
+AuthorName: Kingkor Roy Tirtho
+WebSite: https://spotube.krtirtho.dev
+SourceCode: https://github.com/krtirtho/spotube
+IssueTracker: https://github.com/krtirtho/spotube/issues
+Changelog: https://github.com/krtirtho/spotube/releases
+Description: 'Spotube is a modern, privacy-respecting music player that delivers an
+  Apple Music-like experience on Android with stunning Cupertino aesthetics.
+
+
+  Features:
+
+  * Apple Music-styled frosted glass now-playing sheet with fluid gradient backgrounds
+
+  * Real-time time-synced karaoke lyrics with line-by-line animations
+
+  * Zero audio ads, completely free and open source
+
+  * High-bitrate audio playback with local caching and offline downloads
+
+  * Clean Cupertino-inspired design system'

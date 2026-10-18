@@ -1,0 +1,469 @@
+{
+  "repo": {
+    "name": {
+      "en-US": "IOSonDroid"
+    },
+    "description": {
+      "en-US": "F-Droid repository for iOS-exclusive apps and Apple ecosystem experiences built for Android."
+    },
+    "icon": {
+      "en-US": {
+        "name": "/icon.png",
+        "sha256": "abb9efe1af3dbbf8e8587bfa80eeecf0467ec1a5343c4d924c72d46fc3fe3f94",
+        "size": 5650
+      }
+    },
+    "address": "https://pratech1015.github.io/IOSonDroid/repo",
+    "timestamp": 1792321646738
+  },
+  "packages": {
+    "com.agupta07505.smartisland": {
+      "metadata": {
+        "name": {
+          "en-US": "SmartIsland - iOS Dynamic Island"
+        },
+        "summary": {
+          "en-US": "Interactive Apple iOS Dynamic Island notifications and pill for Android"
+        },
+        "description": {
+          "en-US": "SmartIsland brings the Apple iPhone Dynamic Island interaction model to any Android device. It turns your punch-hole camera cutout into a fluid, responsive floating pill.\n\nFeatures:\n* Music playback controls with animated frequency visualizer\n* Incoming phone call notifications with instant answer/reject actions\n* Timer and stopwatch countdown live activities\n* Battery charging animations and percentage status\n* Expandable pill with long-press gesture interactions\n* Customizable position, size, and notch alignment"
+        },
+        "categories": [
+          "System",
+          "Customization"
+        ],
+        "license": "GPL-3.0-or-later",
+        "webSite": "https://github.com/agupta07505/SmartIsland",
+        "sourceCode": "https://github.com/agupta07505/SmartIsland",
+        "issueTracker": "https://github.com/agupta07505/SmartIsland/issues",
+        "icon": {
+          "en-US": {
+            "name": "/icons/com.agupta07505.smartisland.png",
+            "sha256": "434aea6a155d3fc0f9f3a5717c3a60ad0cfdc92a5e7e479fd9f346b0e7313c3e",
+            "size": 4918
+          }
+        }
+      },
+      "versions": {
+        "981d9b2fe02d15535309f378a789d96ff67465a0df074c0feeffa80337ce887c": {
+          "added": 1792321646760,
+          "file": {
+            "name": "/com.agupta07505.smartisland_70.apk",
+            "sha256": "981d9b2fe02d15535309f378a789d96ff67465a0df074c0feeffa80337ce887c",
+            "size": 9838684
+          },
+          "manifest": {
+            "versionName": "7.0.0",
+            "versionCode": 70,
+            "minSdkVersion": 21,
+            "targetSdkVersion": 34,
+            "signer": {
+              "sha256": [
+                "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "com.bluebubbles.messaging": {
+      "metadata": {
+        "name": {
+          "en-US": "BlueBubbles - iMessage for Android"
+        },
+        "summary": {
+          "en-US": "Send and receive Apple iMessages and FaceTime calls on Android"
+        },
+        "description": {
+          "en-US": "BlueBubbles is an open-source ecosystem client that brings Apple iMessage to Android. Communicate seamlessly with iPhone users without losing any of Apple's flagship messaging features.\n\nFeatures:\n* Full iMessage support: Send and receive texts, voice notes, stickers, and high-res media\n* Tapbacks: Love, like, dislike, laugh, emphasize, and question reactions\n* Typing indicators and read receipts in real-time\n* FaceTime integration: Receive incoming FaceTime calls directly on Android\n* Direct message replies and message editing support\n* End-to-end encrypted connection to your private bridge"
+        },
+        "categories": [
+          "Communication",
+          "Ecosystem"
+        ],
+        "license": "Apache-2.0",
+        "webSite": "https://bluebubbles.app",
+        "sourceCode": "https://github.com/BlueBubblesApp/bluebubbles-app",
+        "issueTracker": "https://github.com/BlueBubblesApp/bluebubbles-app/issues",
+        "icon": {
+          "en-US": {
+            "name": "/icons/com.bluebubbles.messaging.png",
+            "sha256": "a7c22fc8d8121818dae9407caec0d6ad592dc59691f017a89cc5c350096976fa",
+            "size": 4694
+          }
+        }
+      },
+      "versions": {}
+    },
+    "com.mccal.folio": {
+      "metadata": {
+        "name": {
+          "en-US": "Folio Launcher - iOS SpringBoard"
+        },
+        "summary": {
+          "en-US": "Clean Apple iOS 17/18-style SpringBoard launcher for Android"
+        },
+        "description": {
+          "en-US": "Folio Launcher is a minimalist, iPhone-inspired SpringBoard launcher designed to replicate the visual polish and fluid physics of Apple iOS on Android.\n\nFeatures:\n* Authentic iOS SpringBoard grid with rounded squircle app icons\n* iOS-style App Library with automated categorization and alphabetical search\n* iOS widget stacking support and home screen editing mode (jiggle mode)\n* Fluid spring physics and transition animations\n* Support for foldables, tablets, and standard Android smartphones"
+        },
+        "categories": [
+          "System",
+          "Launcher"
+        ],
+        "license": "GPL-3.0-or-later",
+        "webSite": "https://github.com/McCal-Codes/folio",
+        "sourceCode": "https://github.com/McCal-Codes/folio",
+        "issueTracker": "https://github.com/McCal-Codes/folio/issues",
+        "icon": {
+          "en-US": {
+            "name": "/icons/com.mccal.folio.png",
+            "sha256": "aaf343a91f92016dcfdfc2755080c388b4fda7b6f39f10c2d1ff4bdefe1af254",
+            "size": 6539
+          }
+        }
+      },
+      "versions": {
+        "79cf398c4ff985e4df9ba0c1056a591c6a5ae1ccc972f3ce482abb2b4bbee63a": {
+          "added": 1792321646767,
+          "file": {
+            "name": "/com.mccal.folio_68.apk",
+            "sha256": "79cf398c4ff985e4df9ba0c1056a591c6a5ae1ccc972f3ce482abb2b4bbee63a",
+            "size": 9808156
+          },
+          "manifest": {
+            "versionName": "0.6.8",
+            "versionCode": 68,
+            "minSdkVersion": 21,
+            "targetSdkVersion": 34,
+            "signer": {
+              "sha256": [
+                "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "com.moseoridev.warpshare": {
+      "metadata": {
+        "name": {
+          "en-US": "WarpShare - Apple AirDrop Client"
+        },
+        "summary": {
+          "en-US": "Native Apple AirDrop file transfer sender and receiver for Android"
+        },
+        "description": {
+          "en-US": "WarpShare enables high-speed, local peer-to-peer file sharing between Android and Apple devices (Mac, iPhone, iPad) using the native Apple AirDrop protocol.\n\nFeatures:\n* Send files, photos, and videos to Apple devices running macOS or iOS\n* Discovered seamlessly in Apple's native AirDrop sharing sheet\n* Uses local Wi-Fi / AWDL direct transfers with maximum throughput\n* Zero external servers, zero cloud uploads, completely private and offline\n* Material You UI paired with Cupertino device discovery icons"
+        },
+        "categories": [
+          "Connectivity",
+          "Tools"
+        ],
+        "license": "GPL-3.0-or-later",
+        "webSite": "https://github.com/moseoridev/WarpShare",
+        "sourceCode": "https://github.com/moseoridev/WarpShare",
+        "issueTracker": "https://github.com/moseoridev/WarpShare/issues",
+        "icon": {
+          "en-US": {
+            "name": "/icons/com.moseoridev.warpshare.png",
+            "sha256": "1451ddc11f2dd13abf6a11a180bedc0d172c7e72405a8996a5df7ce07d89c075",
+            "size": 9726
+          }
+        }
+      },
+      "versions": {
+        "fb5035594d04341b9987d1797543181bcc70b77426cb9db3160224a8ed131aae": {
+          "added": 1792321646800,
+          "file": {
+            "name": "/com.moseoridev.warpshare_204.apk",
+            "sha256": "fb5035594d04341b9987d1797543181bcc70b77426cb9db3160224a8ed131aae",
+            "size": 49008409
+          },
+          "manifest": {
+            "versionName": "2.0.4",
+            "versionCode": 204,
+            "minSdkVersion": 21,
+            "targetSdkVersion": 34,
+            "signer": {
+              "sha256": [
+                "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "de.seemoo.at_tracking_detection": {
+      "metadata": {
+        "name": {
+          "en-US": "AirGuard - AirTag & Find My Protection"
+        },
+        "summary": {
+          "en-US": "Protect against unwanted Apple AirTag and Find My tracking"
+        },
+        "description": {
+          "en-US": "AirGuard protects Android users against unwanted tracking by Apple AirTags, Apple Find My accessories, and Bluetooth beacons. Developed by the Secure Mobile Networking Lab (SEEMOO) at TU Darmstadt.\n\nFeatures:\n* Background scanning for nearby Apple AirTags and Find My network trackers\n* Automatic alerts when a tracker has been following you over multiple locations\n* Play alarm sound directly on the suspect AirTag to locate it easily\n* Interactive map showing where and when the tracker was detected\n* Instructions on how to safely disable suspect trackers"
+        },
+        "categories": [
+          "Security",
+          "Privacy"
+        ],
+        "license": "MIT",
+        "webSite": "https://airguard.app",
+        "sourceCode": "https://github.com/seemoo-lab/AirGuard",
+        "issueTracker": "https://github.com/seemoo-lab/AirGuard/issues",
+        "icon": {
+          "en-US": {
+            "name": "/icons/de.seemoo.at_tracking_detection.png",
+            "sha256": "1830a84ea677d2074fae51b06ddc7b7bc7063a42397b2affb63aebe76c107db1",
+            "size": 7912
+          }
+        }
+      },
+      "versions": {
+        "6fd3e5d1c3c1255f44ac29ed27e50fba760180dcdc4f452d7560c1e28ca12a93": {
+          "added": 1792321646809,
+          "file": {
+            "name": "/de.seemoo.at_tracking_detection_88.apk",
+            "sha256": "6fd3e5d1c3c1255f44ac29ed27e50fba760180dcdc4f452d7560c1e28ca12a93",
+            "size": 9196952
+          },
+          "manifest": {
+            "versionName": "3.1.3",
+            "versionCode": 88,
+            "minSdkVersion": 21,
+            "targetSdkVersion": 34,
+            "signer": {
+              "sha256": [
+                "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "de.seemoo.openhaystack": {
+      "metadata": {
+        "name": {
+          "en-US": "OpenHaystack Mobile - Find My Network"
+        },
+        "summary": {
+          "en-US": "Track custom Bluetooth tags using Apple's crowdsourced Find My network"
+        },
+        "description": {
+          "en-US": "OpenHaystack Mobile allows tracking DIY AirTags and personal Bluetooth beacons using Apple's massive Find My network directly from an Android device.\n\nFeatures:\n* Track OpenHaystack devices broadcast via Bluetooth LE\n* Map view showing current and historical locations\n* Compatible with ESP32, nRF51/nRF52, BBC micro:bit, and Raspberry Pi Pico beacons\n* Zero dependence on Apple iPhone hardware"
+        },
+        "categories": [
+          "Connectivity",
+          "Tools"
+        ],
+        "license": "GPL-3.0-or-later",
+        "webSite": "https://seemoo.de/openhaystack",
+        "sourceCode": "https://github.com/seemoo-lab/openhaystack",
+        "issueTracker": "https://github.com/seemoo-lab/openhaystack/issues",
+        "icon": {
+          "en-US": {
+            "name": "/icons/de.seemoo.openhaystack.png",
+            "sha256": "e420810d3246e18deea070cecc8891ed9c67cfd4a3abf38b1af8f4db8fefc9ce",
+            "size": 5680
+          }
+        }
+      },
+      "versions": {}
+    },
+    "io.iosondroid.calculator": {
+      "metadata": {
+        "name": {
+          "en-US": "Cupertino Calculator - iOS Calculator"
+        },
+        "summary": {
+          "en-US": "Pixel-perfect recreation of the Apple iOS Calculator for Android"
+        },
+        "description": {
+          "en-US": "Cupertino Calculator is a faithful recreation of Apple's default iOS Calculator app for Android.\n\nFeatures:\n* Iconic circular orange and dark-gray keypad layout\n* Swipe gesture across the display digits to delete characters\n* Landscape orientation switches seamlessly into Apple's Scientific Calculator\n* Native iOS haptic feedback on button presses\n* San Francisco typography and Apple Human Interface Guidelines styling"
+        },
+        "categories": [
+          "Stock Apps",
+          "Tools"
+        ],
+        "license": "MIT",
+        "webSite": "https://github.com/AppAuxin/iOS-Calculator",
+        "sourceCode": "https://github.com/AppAuxin/iOS-Calculator",
+        "issueTracker": "https://github.com/AppAuxin/iOS-Calculator/issues",
+        "icon": {
+          "en-US": {
+            "name": "/icons/io.iosondroid.calculator.png",
+            "sha256": "9ce7a2678cca638b6e472689948e87fd8c7cad46c9e62a801b1cb63bd0e8c0ea",
+            "size": 5060
+          }
+        }
+      },
+      "versions": {}
+    },
+    "io.iosondroid.controlcenter": {
+      "metadata": {
+        "name": {
+          "en-US": "iOS Control Center"
+        },
+        "summary": {
+          "en-US": "Apple iOS frosted-glass Control Center overlay with quick toggles"
+        },
+        "description": {
+          "en-US": "iOS Control Center provides a fluid Apple-style Control Center swipe panel on Android.\n\nFeatures:\n* Swipe down from top-right corner or edge handle to reveal\n* Frosted glass backdrop blur effect matching iOS 17/18\n* Large volume and brightness vertical sliders with smooth animation\n* Quick connectivity platter: Wi-Fi, Bluetooth, Airplane mode, Cellular data\n* Media playback widget with track details and play/pause/skip\n* Flashlight, Calculator, Camera, Screen Record, and Do Not Disturb shortcuts"
+        },
+        "categories": [
+          "System",
+          "Customization"
+        ],
+        "license": "GPL-3.0-or-later",
+        "webSite": "https://github.com/IOSonDroid/iOSControlCenter",
+        "sourceCode": "https://github.com/IOSonDroid/iOSControlCenter",
+        "issueTracker": "https://github.com/IOSonDroid/iOSControlCenter/issues",
+        "icon": {
+          "en-US": {
+            "name": "/icons/io.iosondroid.controlcenter.png",
+            "sha256": "b4beac94ed200d93ce26a7fd09ffe85c83964272dda70da0f1074cf0ba7db0bd",
+            "size": 4288
+          }
+        }
+      },
+      "versions": {}
+    },
+    "io.iosondroid.notes": {
+      "metadata": {
+        "name": {
+          "en-US": "Cupertino Notes - iOS Notes"
+        },
+        "summary": {
+          "en-US": "Apple iOS Notes recreation with rich text, folders, and yellow accents"
+        },
+        "description": {
+          "en-US": "Cupertino Notes brings the elegance of Apple's iOS Notes app to Android.\n\nFeatures:\n* Classic yellow-accented Apple notepad aesthetic with paper texture\n* Folder hierarchy: iCloud, On My Device, and Quick Notes\n* Checklists, bullet lists, numbered lists, and title/heading typography\n* Pin favorite notes to the top of your list\n* Encrypted local storage with biometric lock (Fingerprint/Face Unlock)\n* Markdown export and sharing options"
+        },
+        "categories": [
+          "Stock Apps",
+          "Productivity"
+        ],
+        "license": "Apache-2.0",
+        "webSite": "https://github.com/IOSonDroid/CupertinoNotes",
+        "sourceCode": "https://github.com/IOSonDroid/CupertinoNotes",
+        "issueTracker": "https://github.com/IOSonDroid/CupertinoNotes/issues",
+        "icon": {
+          "en-US": {
+            "name": "/icons/io.iosondroid.notes.png",
+            "sha256": "d17db64bf438ba0ea84a4696d72cd592c9da130227f18dd5bec21aad3ecad85f",
+            "size": 3440
+          }
+        }
+      },
+      "versions": {}
+    },
+    "ml.docilealligator.infinityforreddit": {
+      "metadata": {
+        "name": {
+          "en-US": "Infinity - Apollo Experience"
+        },
+        "summary": {
+          "en-US": "The closest open-source equivalent to Apollo for Reddit on Android"
+        },
+        "description": {
+          "en-US": "Infinity for Reddit provides Android users with the fluid, gesture-first experience that made the iOS-exclusive Apollo for Reddit famous.\n\nFeatures:\n* Full swipe gestures to upvote, downvote, save, collapse comments, and reply\n* Clean compact card and media views inspired by iOS Apollo\n* Lazy Mode: Smooth automated scrolling through posts and media\n* Deep theme customization with OLED true dark mode\n* Multi-account support and custom API key integration"
+        },
+        "categories": [
+          "Communication",
+          "Social"
+        ],
+        "license": "GPL-3.0-or-later",
+        "webSite": "https://github.com/Docile-Alligator/Infinity-For-Reddit",
+        "sourceCode": "https://github.com/Docile-Alligator/Infinity-For-Reddit",
+        "issueTracker": "https://github.com/Docile-Alligator/Infinity-For-Reddit/issues",
+        "icon": {
+          "en-US": {
+            "name": "/icons/ml.docilealligator.infinityforreddit.png",
+            "sha256": "f31acebed92d846b60c96266847ea049e277efb66e18d173a933a8799b8e1936",
+            "size": 5214
+          }
+        }
+      },
+      "versions": {}
+    },
+    "org.touchhle.android": {
+      "metadata": {
+        "name": {
+          "en-US": "touchHLE - iOS App Emulator"
+        },
+        "summary": {
+          "en-US": "High-level emulator for early iPhone OS / iOS apps and games"
+        },
+        "description": {
+          "en-US": "touchHLE is an open-source, high-level emulator designed to run early iPhone OS and iOS apps (such as classic Super Monkey Ball, Rolando, Doom Classic, and early 32-bit apps) directly on modern Android devices.\n\nFeatures:\n* Run decrypted .ipa and .app bundles with native ARM performance\n* Built-in graphical app launcher for Android\n* Full touch screen and multi-touch support recreating the iPhone experience\n* OpenAL-based high fidelity audio emulation\n* Hardware accelerated OpenGL ES graphics rendering"
+        },
+        "categories": [
+          "Emulation",
+          "Games"
+        ],
+        "license": "GPL-3.0-or-later",
+        "webSite": "https://touchhle.org",
+        "sourceCode": "https://github.com/touchHLE/touchHLE",
+        "issueTracker": "https://github.com/touchHLE/touchHLE/issues",
+        "icon": {
+          "en-US": {
+            "name": "/icons/org.touchhle.android.png",
+            "sha256": "a76448cf3069ea2e7248d621317be57a6d52359affb750224541866bb5cb9b41",
+            "size": 4730
+          }
+        }
+      },
+      "versions": {
+        "33850dcd7cc67c98acf8b15d772f58f777b82c4a5a67e9ebe1be3d8501791372": {
+          "added": 1792321646828,
+          "file": {
+            "name": "/org.touchhle.android_30.apk",
+            "sha256": "33850dcd7cc67c98acf8b15d772f58f777b82c4a5a67e9ebe1be3d8501791372",
+            "size": 21139598
+          },
+          "manifest": {
+            "versionName": "0.3.0",
+            "versionCode": 30,
+            "minSdkVersion": 21,
+            "targetSdkVersion": 34,
+            "signer": {
+              "sha256": [
+                "282dec2c81cee85709a04b6edf6c7717592b33f40c8599990e191ba429254c67"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "oss.krtirtho.spotube": {
+      "metadata": {
+        "name": {
+          "en-US": "Spotube - Apple Music Experience"
+        },
+        "summary": {
+          "en-US": "Apple Music-inspired music client with synced lyrics and Cupertino UI"
+        },
+        "description": {
+          "en-US": "Spotube is a modern, privacy-respecting music player that delivers an Apple Music-like experience on Android with stunning Cupertino aesthetics.\n\nFeatures:\n* Apple Music-styled frosted glass now-playing sheet with fluid gradient backgrounds\n* Real-time time-synced karaoke lyrics with line-by-line animations\n* Zero audio ads, completely free and open source\n* High-bitrate audio playback with local caching and offline downloads\n* Clean Cupertino-inspired design system"
+        },
+        "categories": [
+          "Multimedia",
+          "Music"
+        ],
+        "license": "GPL-3.0-or-later",
+        "webSite": "https://spotube.krtirtho.dev",
+        "sourceCode": "https://github.com/krtirtho/spotube",
+        "issueTracker": "https://github.com/krtirtho/spotube/issues",
+        "icon": {
+          "en-US": {
+            "name": "/icons/oss.krtirtho.spotube.png",
+            "sha256": "f574b5d6db42723776175a04cef13a8fe18aa280b3b6295e8feca247487cc18d",
+            "size": 4167
+          }
+        }
+      },
+      "versions": {}
+    }
+  }
+}

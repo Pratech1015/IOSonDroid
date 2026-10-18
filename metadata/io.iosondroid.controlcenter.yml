@@ -1,0 +1,29 @@
+packageName: io.iosondroid.controlcenter
+Name: iOS Control Center
+Summary: Apple iOS frosted-glass Control Center overlay with quick toggles
+Categories:
+- System
+- Customization
+License: GPL-3.0-or-later
+AuthorName: IOSonDroid Community
+WebSite: https://github.com/IOSonDroid/iOSControlCenter
+SourceCode: https://github.com/IOSonDroid/iOSControlCenter
+IssueTracker: https://github.com/IOSonDroid/iOSControlCenter/issues
+Changelog: https://github.com/IOSonDroid/iOSControlCenter/releases
+Description: 'iOS Control Center provides a fluid Apple-style Control Center swipe
+  panel on Android.
+
+
+  Features:
+
+  * Swipe down from top-right corner or edge handle to reveal
+
+  * Frosted glass backdrop blur effect matching iOS 17/18
+
+  * Large volume and brightness vertical sliders with smooth animation
+
+  * Quick connectivity platter: Wi-Fi, Bluetooth, Airplane mode, Cellular data
+
+  * Media playback widget with track details and play/pause/skip
+
+  * Flashlight, Calculator, Camera, Screen Record, and Do Not Disturb shortcuts'

@@ -1,0 +1,25 @@
+packageName: de.seemoo.openhaystack
+Name: OpenHaystack Mobile - Find My Network
+Summary: Track custom Bluetooth tags using Apple's crowdsourced Find My network
+Categories:
+- Connectivity
+- Tools
+License: GPL-3.0-or-later
+AuthorName: SEEMOO Lab
+WebSite: https://seemoo.de/openhaystack
+SourceCode: https://github.com/seemoo-lab/openhaystack
+IssueTracker: https://github.com/seemoo-lab/openhaystack/issues
+Changelog: https://github.com/seemoo-lab/openhaystack/releases
+Description: 'OpenHaystack Mobile allows tracking DIY AirTags and personal Bluetooth
+  beacons using Apple''s massive Find My network directly from an Android device.
+
+
+  Features:
+
+  * Track OpenHaystack devices broadcast via Bluetooth LE
+
+  * Map view showing current and historical locations
+
+  * Compatible with ESP32, nRF51/nRF52, BBC micro:bit, and Raspberry Pi Pico beacons
+
+  * Zero dependence on Apple iPhone hardware'

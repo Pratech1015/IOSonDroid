@@ -1,0 +1,30 @@
+packageName: com.agupta07505.smartisland
+Name: SmartIsland - iOS Dynamic Island
+Summary: Interactive Apple iOS Dynamic Island notifications and pill for Android
+Categories:
+- System
+- Customization
+License: GPL-3.0-or-later
+AuthorName: agupta07505
+WebSite: https://github.com/agupta07505/SmartIsland
+SourceCode: https://github.com/agupta07505/SmartIsland
+IssueTracker: https://github.com/agupta07505/SmartIsland/issues
+Changelog: https://github.com/agupta07505/SmartIsland/releases
+Description: 'SmartIsland brings the Apple iPhone Dynamic Island interaction model
+  to any Android device. It turns your punch-hole camera cutout into a fluid, responsive
+  floating pill.
+
+
+  Features:
+
+  * Music playback controls with animated frequency visualizer
+
+  * Incoming phone call notifications with instant answer/reject actions
+
+  * Timer and stopwatch countdown live activities
+
+  * Battery charging animations and percentage status
+
+  * Expandable pill with long-press gesture interactions
+
+  * Customizable position, size, and notch alignment'

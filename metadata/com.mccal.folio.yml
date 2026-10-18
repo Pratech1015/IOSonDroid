@@ -1,0 +1,27 @@
+packageName: com.mccal.folio
+Name: Folio Launcher - iOS SpringBoard
+Summary: Clean Apple iOS 17/18-style SpringBoard launcher for Android
+Categories:
+- System
+- Launcher
+License: GPL-3.0-or-later
+AuthorName: McCal-Codes
+WebSite: https://github.com/McCal-Codes/folio
+SourceCode: https://github.com/McCal-Codes/folio
+IssueTracker: https://github.com/McCal-Codes/folio/issues
+Changelog: https://github.com/McCal-Codes/folio/releases
+Description: 'Folio Launcher is a minimalist, iPhone-inspired SpringBoard launcher
+  designed to replicate the visual polish and fluid physics of Apple iOS on Android.
+
+
+  Features:
+
+  * Authentic iOS SpringBoard grid with rounded squircle app icons
+
+  * iOS-style App Library with automated categorization and alphabetical search
+
+  * iOS widget stacking support and home screen editing mode (jiggle mode)
+
+  * Fluid spring physics and transition animations
+
+  * Support for foldables, tablets, and standard Android smartphones'

@@ -1,0 +1,27 @@
+packageName: ml.docilealligator.infinityforreddit
+Name: Infinity - Apollo Experience
+Summary: The closest open-source equivalent to Apollo for Reddit on Android
+Categories:
+- Communication
+- Social
+License: GPL-3.0-or-later
+AuthorName: Docile Alligator
+WebSite: https://github.com/Docile-Alligator/Infinity-For-Reddit
+SourceCode: https://github.com/Docile-Alligator/Infinity-For-Reddit
+IssueTracker: https://github.com/Docile-Alligator/Infinity-For-Reddit/issues
+Changelog: https://github.com/Docile-Alligator/Infinity-For-Reddit/releases
+Description: 'Infinity for Reddit provides Android users with the fluid, gesture-first
+  experience that made the iOS-exclusive Apollo for Reddit famous.
+
+
+  Features:
+
+  * Full swipe gestures to upvote, downvote, save, collapse comments, and reply
+
+  * Clean compact card and media views inspired by iOS Apollo
+
+  * Lazy Mode: Smooth automated scrolling through posts and media
+
+  * Deep theme customization with OLED true dark mode
+
+  * Multi-account support and custom API key integration'

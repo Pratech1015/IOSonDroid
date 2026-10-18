@@ -1,0 +1,28 @@
+packageName: org.touchhle.android
+Name: touchHLE - iOS App Emulator
+Summary: High-level emulator for early iPhone OS / iOS apps and games
+Categories:
+- Emulation
+- Games
+License: GPL-3.0-or-later
+AuthorName: touchHLE Team & hikari_no_yume
+WebSite: https://touchhle.org
+SourceCode: https://github.com/touchHLE/touchHLE
+IssueTracker: https://github.com/touchHLE/touchHLE/issues
+Changelog: https://touchhle.org/news/
+Description: 'touchHLE is an open-source, high-level emulator designed to run early
+  iPhone OS and iOS apps (such as classic Super Monkey Ball, Rolando, Doom Classic,
+  and early 32-bit apps) directly on modern Android devices.
+
+
+  Features:
+
+  * Run decrypted .ipa and .app bundles with native ARM performance
+
+  * Built-in graphical app launcher for Android
+
+  * Full touch screen and multi-touch support recreating the iPhone experience
+
+  * OpenAL-based high fidelity audio emulation
+
+  * Hardware accelerated OpenGL ES graphics rendering'

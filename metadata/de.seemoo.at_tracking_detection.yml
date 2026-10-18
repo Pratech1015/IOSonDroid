@@ -1,0 +1,28 @@
+packageName: de.seemoo.at_tracking_detection
+Name: AirGuard - AirTag & Find My Protection
+Summary: Protect against unwanted Apple AirTag and Find My tracking
+Categories:
+- Security
+- Privacy
+License: MIT
+AuthorName: SEEMOO Lab (TU Darmstadt)
+WebSite: https://airguard.app
+SourceCode: https://github.com/seemoo-lab/AirGuard
+IssueTracker: https://github.com/seemoo-lab/AirGuard/issues
+Changelog: https://github.com/seemoo-lab/AirGuard/releases
+Description: 'AirGuard protects Android users against unwanted tracking by Apple AirTags,
+  Apple Find My accessories, and Bluetooth beacons. Developed by the Secure Mobile
+  Networking Lab (SEEMOO) at TU Darmstadt.
+
+
+  Features:
+
+  * Background scanning for nearby Apple AirTags and Find My network trackers
+
+  * Automatic alerts when a tracker has been following you over multiple locations
+
+  * Play alarm sound directly on the suspect AirTag to locate it easily
+
+  * Interactive map showing where and when the tracker was detected
+
+  * Instructions on how to safely disable suspect trackers'

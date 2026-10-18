@@ -1,0 +1,31 @@
+packageName: com.bluebubbles.messaging
+Name: BlueBubbles - iMessage for Android
+Summary: Send and receive Apple iMessages and FaceTime calls on Android
+Categories:
+- Communication
+- Ecosystem
+License: Apache-2.0
+AuthorName: BlueBubbles Team
+WebSite: https://bluebubbles.app
+SourceCode: https://github.com/BlueBubblesApp/bluebubbles-app
+IssueTracker: https://github.com/BlueBubblesApp/bluebubbles-app/issues
+Changelog: https://github.com/BlueBubblesApp/bluebubbles-app/releases
+Description: 'BlueBubbles is an open-source ecosystem client that brings Apple iMessage
+  to Android. Communicate seamlessly with iPhone users without losing any of Apple''s
+  flagship messaging features.
+
+
+  Features:
+
+  * Full iMessage support: Send and receive texts, voice notes, stickers, and high-res
+  media
+
+  * Tapbacks: Love, like, dislike, laugh, emphasize, and question reactions
+
+  * Typing indicators and read receipts in real-time
+
+  * FaceTime integration: Receive incoming FaceTime calls directly on Android
+
+  * Direct message replies and message editing support
+
+  * End-to-end encrypted connection to your private bridge'

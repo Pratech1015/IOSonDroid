@@ -1,0 +1,27 @@
+packageName: com.moseoridev.warpshare
+Name: WarpShare - Apple AirDrop Client
+Summary: Native Apple AirDrop file transfer sender and receiver for Android
+Categories:
+- Connectivity
+- Tools
+License: GPL-3.0-or-later
+AuthorName: moseoridev & MoKee OpenSource
+WebSite: https://github.com/moseoridev/WarpShare
+SourceCode: https://github.com/moseoridev/WarpShare
+IssueTracker: https://github.com/moseoridev/WarpShare/issues
+Changelog: https://github.com/moseoridev/WarpShare/releases
+Description: 'WarpShare enables high-speed, local peer-to-peer file sharing between
+  Android and Apple devices (Mac, iPhone, iPad) using the native Apple AirDrop protocol.
+
+
+  Features:
+
+  * Send files, photos, and videos to Apple devices running macOS or iOS
+
+  * Discovered seamlessly in Apple''s native AirDrop sharing sheet
+
+  * Uses local Wi-Fi / AWDL direct transfers with maximum throughput
+
+  * Zero external servers, zero cloud uploads, completely private and offline
+
+  * Material You UI paired with Cupertino device discovery icons'

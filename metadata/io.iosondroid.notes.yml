@@ -1,0 +1,28 @@
+packageName: io.iosondroid.notes
+Name: Cupertino Notes - iOS Notes
+Summary: Apple iOS Notes recreation with rich text, folders, and yellow accents
+Categories:
+- Stock Apps
+- Productivity
+License: Apache-2.0
+AuthorName: IOSonDroid Community
+WebSite: https://github.com/IOSonDroid/CupertinoNotes
+SourceCode: https://github.com/IOSonDroid/CupertinoNotes
+IssueTracker: https://github.com/IOSonDroid/CupertinoNotes/issues
+Changelog: https://github.com/IOSonDroid/CupertinoNotes/releases
+Description: 'Cupertino Notes brings the elegance of Apple''s iOS Notes app to Android.
+
+
+  Features:
+
+  * Classic yellow-accented Apple notepad aesthetic with paper texture
+
+  * Folder hierarchy: iCloud, On My Device, and Quick Notes
+
+  * Checklists, bullet lists, numbered lists, and title/heading typography
+
+  * Pin favorite notes to the top of your list
+
+  * Encrypted local storage with biometric lock (Fingerprint/Face Unlock)
+
+  * Markdown export and sharing options'

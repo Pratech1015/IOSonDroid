@@ -1,0 +1,27 @@
+packageName: io.iosondroid.calculator
+Name: Cupertino Calculator - iOS Calculator
+Summary: Pixel-perfect recreation of the Apple iOS Calculator for Android
+Categories:
+- Stock Apps
+- Tools
+License: MIT
+AuthorName: IOSonDroid Community
+WebSite: https://github.com/AppAuxin/iOS-Calculator
+SourceCode: https://github.com/AppAuxin/iOS-Calculator
+IssueTracker: https://github.com/AppAuxin/iOS-Calculator/issues
+Changelog: https://github.com/AppAuxin/iOS-Calculator/releases
+Description: 'Cupertino Calculator is a faithful recreation of Apple''s default iOS
+  Calculator app for Android.
+
+
+  Features:
+
+  * Iconic circular orange and dark-gray keypad layout
+
+  * Swipe gesture across the display digits to delete characters
+
+  * Landscape orientation switches seamlessly into Apple''s Scientific Calculator
+
+  * Native iOS haptic feedback on button presses
+
+  * San Francisco typography and Apple Human Interface Guidelines styling'
