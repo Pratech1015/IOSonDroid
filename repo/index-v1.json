@@ -4,7 +4,7 @@
     "description": "F-Droid repository for iOS-exclusive apps and Apple ecosystem experiences built for Android.",
     "icon": "icon.png",
     "address": "https://pratech1015.github.io/IOSonDroid/repo",
-    "timestamp": 1792402937842,
+    "timestamp": 1792411550417,
     "version": 20002,
     "fingerprint": "33F66FBCA58FC049A8D3E264E7AF414530DC8329D83BFBD9FCF0F3337879E5E0"
   },
@@ -30,8 +30,8 @@
         "Customization"
       ],
       "suggestedVersionCode": 70,
-      "added": 1792316537842,
-      "lastUpdated": 1792402937842
+      "added": 1792325150417,
+      "lastUpdated": 1792411550417
     },
     {
       "packageName": "com.bluebubbles.messaging",
@@ -50,8 +50,8 @@
         "Ecosystem"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792316537842,
-      "lastUpdated": 1792402937842
+      "added": 1792325150417,
+      "lastUpdated": 1792411550417
     },
     {
       "packageName": "com.mccal.folio",
@@ -70,8 +70,8 @@
         "Launcher"
       ],
       "suggestedVersionCode": 68,
-      "added": 1792316537842,
-      "lastUpdated": 1792402937842
+      "added": 1792325150417,
+      "lastUpdated": 1792411550417
     },
     {
       "packageName": "com.moseoridev.warpshare",
@@ -90,8 +90,8 @@
         "Tools"
       ],
       "suggestedVersionCode": 204,
-      "added": 1792316537842,
-      "lastUpdated": 1792402937842
+      "added": 1792325150417,
+      "lastUpdated": 1792411550417
     },
     {
       "packageName": "de.seemoo.at_tracking_detection",
@@ -110,8 +110,8 @@
         "Privacy"
       ],
       "suggestedVersionCode": 88,
-      "added": 1792316537842,
-      "lastUpdated": 1792402937842
+      "added": 1792325150417,
+      "lastUpdated": 1792411550417
     },
     {
       "packageName": "de.seemoo.openhaystack",
@@ -130,8 +130,8 @@
         "Tools"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792316537842,
-      "lastUpdated": 1792402937842
+      "added": 1792325150417,
+      "lastUpdated": 1792411550417
     },
     {
       "packageName": "io.iosondroid.calculator",
@@ -150,8 +150,8 @@
         "Tools"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792316537842,
-      "lastUpdated": 1792402937842
+      "added": 1792325150417,
+      "lastUpdated": 1792411550417
     },
     {
       "packageName": "io.iosondroid.controlcenter",
@@ -170,8 +170,8 @@
         "Customization"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792316537842,
-      "lastUpdated": 1792402937842
+      "added": 1792325150417,
+      "lastUpdated": 1792411550417
     },
     {
       "packageName": "io.iosondroid.notes",
@@ -190,8 +190,8 @@
         "Productivity"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792316537842,
-      "lastUpdated": 1792402937842
+      "added": 1792325150417,
+      "lastUpdated": 1792411550417
     },
     {
       "packageName": "ml.docilealligator.infinityforreddit",
@@ -210,8 +210,8 @@
         "Social"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792316537842,
-      "lastUpdated": 1792402937842
+      "added": 1792325150417,
+      "lastUpdated": 1792411550417
     },
     {
       "packageName": "org.touchhle.android",
@@ -230,8 +230,8 @@
         "Games"
       ],
       "suggestedVersionCode": 30,
-      "added": 1792316537842,
-      "lastUpdated": 1792402937842
+      "added": 1792325150417,
+      "lastUpdated": 1792411550417
     },
     {
       "packageName": "oss.krtirtho.spotube",
@@ -250,8 +250,8 @@
         "Music"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792316537842,
-      "lastUpdated": 1792402937842
+      "added": 1792325150417,
+      "lastUpdated": 1792411550417
     },
     {
       "packageName": "si.savage.procreate",
@@ -270,8 +270,8 @@
         "Productivity"
       ],
       "suggestedVersionCode": 5350,
-      "added": 1792316537842,
-      "lastUpdated": 1792402937842
+      "added": 1792325150417,
+      "lastUpdated": 1792411550417
     }
   ],
   "packages": {
@@ -287,7 +287,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
-        "added": 1792402937874
+        "added": 1792411550545
       },
       {
         "packageName": "com.agupta07505.smartisland",
@@ -300,7 +300,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
-        "added": 1792402937867
+        "added": 1792411550495
       }
     ],
     "com.mccal.folio": [
@@ -315,7 +315,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
-        "added": 1792402937889
+        "added": 1792411550617
       },
       {
         "packageName": "com.mccal.folio",
@@ -328,7 +328,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
-        "added": 1792402937882
+        "added": 1792411550582
       }
     ],
     "com.moseoridev.warpshare": [
@@ -343,7 +343,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
-        "added": 1792402937965
+        "added": 1792411550875
       },
       {
         "packageName": "com.moseoridev.warpshare",
@@ -356,7 +356,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
-        "added": 1792402937927
+        "added": 1792411550756
       }
     ],
     "de.seemoo.at_tracking_detection": [
@@ -371,7 +371,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
-        "added": 1792402937986
+        "added": 1792411550940
       },
       {
         "packageName": "de.seemoo.at_tracking_detection",
@@ -384,7 +384,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
-        "added": 1792402937976
+        "added": 1792411550901
       }
     ],
     "ml.docilealligator.infinityforreddit": [
@@ -399,7 +399,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "67f402d8e9fa7a6f14d8a2a3c4b99e44fe98c6b7ac774ebd1b3106486926102a",
-        "added": 1792402938012
+        "added": 1792411551021
       }
     ],
     "org.touchhle.android": [
@@ -414,7 +414,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "282dec2c81cee85709a04b6edf6c7717592b33f40c8599990e191ba429254c67",
-        "added": 1792402938043
+        "added": 1792411551097
       },
       {
         "packageName": "org.touchhle.android",
@@ -427,7 +427,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "282dec2c81cee85709a04b6edf6c7717592b33f40c8599990e191ba429254c67",
-        "added": 1792402938028
+        "added": 1792411551075
       }
     ],
     "oss.krtirtho.spotube": [
@@ -442,7 +442,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
-        "added": 1792402938094
+        "added": 1792411551168
       }
     ],
     "si.savage.procreate": [
@@ -451,13 +451,13 @@
         "versionCode": 5350,
         "versionName": "5.3.5",
         "apkName": "si.savage.procreate_5350.apk",
-        "hash": "eb9cc03debe0ec0d800071bf334e0439f3788c147b06b262448cfe6d461c38d7",
+        "hash": "7e950d837d94875f19e20afd2fbfdda66882043a47354fc0a8d59fe43c8e3523",
         "hashType": "sha256",
-        "size": 19977733,
+        "size": 20965,
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
-        "signer": "30f3979db8ff40b4271663c9709e68d3f0f84e5f98590fbccfe34d75f957462b",
-        "added": 1792402938108
+        "signer": "816823ab503a6937134153a5ef45d93066da516a912259a54ee07432d43fdc93",
+        "added": 1792411551168
       }
     ]
   }
