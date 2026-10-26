@@ -4,7 +4,7 @@
     "description": "F-Droid repository for iOS-exclusive apps and Apple ecosystem experiences built for Android.",
     "icon": "icon.png",
     "address": "https://pratech1015.github.io/IOSonDroid/repo",
-    "timestamp": 1792411550417,
+    "timestamp": 1793008360027,
     "version": 20002,
     "fingerprint": "33F66FBCA58FC049A8D3E264E7AF414530DC8329D83BFBD9FCF0F3337879E5E0"
   },
@@ -30,8 +30,8 @@
         "Customization"
       ],
       "suggestedVersionCode": 70,
-      "added": 1792325150417,
-      "lastUpdated": 1792411550417
+      "added": 1792921960027,
+      "lastUpdated": 1793008360027
     },
     {
       "packageName": "com.bluebubbles.messaging",
@@ -50,8 +50,8 @@
         "Ecosystem"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792325150417,
-      "lastUpdated": 1792411550417
+      "added": 1792921960027,
+      "lastUpdated": 1793008360027
     },
     {
       "packageName": "com.mccal.folio",
@@ -70,8 +70,8 @@
         "Launcher"
       ],
       "suggestedVersionCode": 68,
-      "added": 1792325150417,
-      "lastUpdated": 1792411550417
+      "added": 1792921960027,
+      "lastUpdated": 1793008360027
     },
     {
       "packageName": "com.moseoridev.warpshare",
@@ -90,8 +90,8 @@
         "Tools"
       ],
       "suggestedVersionCode": 204,
-      "added": 1792325150417,
-      "lastUpdated": 1792411550417
+      "added": 1792921960027,
+      "lastUpdated": 1793008360027
     },
     {
       "packageName": "de.seemoo.at_tracking_detection",
@@ -110,8 +110,8 @@
         "Privacy"
       ],
       "suggestedVersionCode": 88,
-      "added": 1792325150417,
-      "lastUpdated": 1792411550417
+      "added": 1792921960027,
+      "lastUpdated": 1793008360027
     },
     {
       "packageName": "de.seemoo.openhaystack",
@@ -130,8 +130,8 @@
         "Tools"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792325150417,
-      "lastUpdated": 1792411550417
+      "added": 1792921960027,
+      "lastUpdated": 1793008360027
     },
     {
       "packageName": "io.iosondroid.calculator",
@@ -150,8 +150,8 @@
         "Tools"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792325150417,
-      "lastUpdated": 1792411550417
+      "added": 1792921960027,
+      "lastUpdated": 1793008360027
     },
     {
       "packageName": "io.iosondroid.controlcenter",
@@ -170,8 +170,8 @@
         "Customization"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792325150417,
-      "lastUpdated": 1792411550417
+      "added": 1792921960027,
+      "lastUpdated": 1793008360027
     },
     {
       "packageName": "io.iosondroid.notes",
@@ -190,8 +190,8 @@
         "Productivity"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792325150417,
-      "lastUpdated": 1792411550417
+      "added": 1792921960027,
+      "lastUpdated": 1793008360027
     },
     {
       "packageName": "ml.docilealligator.infinityforreddit",
@@ -210,8 +210,8 @@
         "Social"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792325150417,
-      "lastUpdated": 1792411550417
+      "added": 1792921960027,
+      "lastUpdated": 1793008360027
     },
     {
       "packageName": "org.touchhle.android",
@@ -230,8 +230,8 @@
         "Games"
       ],
       "suggestedVersionCode": 30,
-      "added": 1792325150417,
-      "lastUpdated": 1792411550417
+      "added": 1792921960027,
+      "lastUpdated": 1793008360027
     },
     {
       "packageName": "oss.krtirtho.spotube",
@@ -250,8 +250,8 @@
         "Music"
       ],
       "suggestedVersionCode": 1,
-      "added": 1792325150417,
-      "lastUpdated": 1792411550417
+      "added": 1792921960027,
+      "lastUpdated": 1793008360027
     },
     {
       "packageName": "si.savage.procreate",
@@ -270,8 +270,8 @@
         "Productivity"
       ],
       "suggestedVersionCode": 5350,
-      "added": 1792325150417,
-      "lastUpdated": 1792411550417
+      "added": 1792921960027,
+      "lastUpdated": 1793008360027
     }
   ],
   "packages": {
@@ -287,7 +287,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
-        "added": 1792411550545
+        "added": 1793008360069
       },
       {
         "packageName": "com.agupta07505.smartisland",
@@ -300,7 +300,20 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
-        "added": 1792411550495
+        "added": 1793008360051
+      },
+      {
+        "packageName": "com.agupta07505.smartisland",
+        "versionCode": 1,
+        "versionName": "1.0.1",
+        "apkName": "com.agupta07505.smartisland_7.6.0.apk",
+        "hash": "1b2cfc235eb1bcb7f49400b9b14f3fb5d373a7858652d26e7c97b694acf0c52e",
+        "hashType": "sha256",
+        "size": 10249548,
+        "minSdkVersion": 21,
+        "targetSdkVersion": 34,
+        "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
+        "added": 1793008360060
       }
     ],
     "com.mccal.folio": [
@@ -315,7 +328,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
-        "added": 1792411550617
+        "added": 1793008360086
       },
       {
         "packageName": "com.mccal.folio",
@@ -328,7 +341,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
-        "added": 1792411550582
+        "added": 1793008360077
       }
     ],
     "com.moseoridev.warpshare": [
@@ -343,7 +356,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
-        "added": 1792411550875
+        "added": 1793008360171
       },
       {
         "packageName": "com.moseoridev.warpshare",
@@ -356,7 +369,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
-        "added": 1792411550756
+        "added": 1793008360128
       }
     ],
     "de.seemoo.at_tracking_detection": [
@@ -371,7 +384,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
-        "added": 1792411550940
+        "added": 1793008360194
       },
       {
         "packageName": "de.seemoo.at_tracking_detection",
@@ -384,7 +397,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
-        "added": 1792411550901
+        "added": 1793008360183
       }
     ],
     "ml.docilealligator.infinityforreddit": [
@@ -399,7 +412,20 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "67f402d8e9fa7a6f14d8a2a3c4b99e44fe98c6b7ac774ebd1b3106486926102a",
-        "added": 1792411551021
+        "added": 1793008360223
+      },
+      {
+        "packageName": "ml.docilealligator.infinityforreddit",
+        "versionCode": 1,
+        "versionName": "1.0.1",
+        "apkName": "ml.docilealligator.infinityforreddit_8.3.4.apk",
+        "hash": "826d6f20476c78c52ce7a53b47d83c67e6f850be13e6eb89074fe2592f933ac6",
+        "hashType": "sha256",
+        "size": 20409096,
+        "minSdkVersion": 21,
+        "targetSdkVersion": 34,
+        "signer": "3bdf03ed23bfa72092b9d0f83ad21bbfb3816e4b079bf96d53e94c46726cfd56",
+        "added": 1793008360246
       }
     ],
     "org.touchhle.android": [
@@ -414,7 +440,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "282dec2c81cee85709a04b6edf6c7717592b33f40c8599990e191ba429254c67",
-        "added": 1792411551097
+        "added": 1793008360281
       },
       {
         "packageName": "org.touchhle.android",
@@ -427,7 +453,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "282dec2c81cee85709a04b6edf6c7717592b33f40c8599990e191ba429254c67",
-        "added": 1792411551075
+        "added": 1793008360264
       }
     ],
     "oss.krtirtho.spotube": [
@@ -442,7 +468,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "5450fd7a0f1cf13b3e3c3253dfbee89e5092dcb382c2ec82360af6c306e6f34a",
-        "added": 1792411551168
+        "added": 1793008360338
       }
     ],
     "si.savage.procreate": [
@@ -457,7 +483,7 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 34,
         "signer": "816823ab503a6937134153a5ef45d93066da516a912259a54ee07432d43fdc93",
-        "added": 1792411551168
+        "added": 1793008360338
       }
     ]
   }
